@@ -4,16 +4,16 @@ import yts from 'yt-search'
 let handler = async (m, { conn: star, command, args, text, usedPrefix }) => {
   if (!text) return star.reply(m.chat, '🐯 Enter the title of a YouTube video or song.\n\n`Example:`\n' + `> *${usedPrefix + command}* Gemini Aaliyah - If Only`, m, rcanal)
 await m.react('🕓')
-    try {
+try {
     let res = await search(args.join(" "))
     let img = await (await fetch(`${res[0].image}`)).buffer()
     let txt = '`乂  Y O U T U B E  -  P L A Y`\n\n'
        txt += `	✩   *Title* : ${res[0].title}\n`
        txt += `	✩   *Duration* : ${secondString(res[0].duration.seconds)}\n`
        txt += `	✩   *Published* : ${eYear(res[0].ago)}\n`
-       txt += `	✩   *Name* : ${res[0].author.name || 'Desconocido'}\n`
+       txt += `	✩   *Canal* : ${res[0].author.name || 'A stranger'}\n`
        txt += `	✩   *Url* : ${'https://youtu.be/' + res[0].videoId}\n\n`
-       txt += `> *-*MSELA-CHUI-V3 To download reply to this message with *Video* or *Audio*.`
+       txt += `> *-* To download reply to this message with *Video* o *Audio*.`
 await star.sendFile(m.chat, img, 'thumbnail.jpg', txt, m, null, rcanal)
 await m.react('✅')
 } catch {
@@ -45,8 +45,8 @@ function secondString(seconds) {
   const m = Math.floor((seconds % 3600) / 60);
   const s = Math.floor(seconds % 60);
   const dDisplay = d > 0 ? d + (d == 1 ? ' Day, ' : ' Days, ') : '';
-  const hDisplay = h > 0 ? h + (h == 1 ? ' Hour' : ' Hours, ') : '';
-  const mDisplay = m > 0 ? m + (m == 1 ? ' Minute, ' : ' Minutes, ') : '';
+  const hDisplay = h > 0 ? h + (h == 1 ? ' Time, ' : ' Hours, ') : '';
+  const mDisplay = m > 0 ? m + (m == 1 ? ' minute, ' : ' Minutes, ') : '';
   const sDisplay = s > 0 ? s + (s == 1 ? ' Second' : ' seconds) : '';
   return dDisplay + hDisplay + mDisplay + sDisplay;
 }
@@ -61,7 +61,7 @@ function eYear(txt) {
     }
     if (txt.includes('month ago')) {
         var T = txt.replace("month ago", "").trim()
-        var L = 'does '  + T + ' month'
+        var L = 'does '  + T + ' we'
         return L
     }
     if (txt.includes('months ago')) {
@@ -81,7 +81,7 @@ function eYear(txt) {
     }
     if (txt.includes('hour ago')) {
         var T = txt.replace("hour ago", "").trim()
-        var L = 'does ' + T + ' hour'
+        var L = 'does ' + T + ' time'
         return L
     }
     if (txt.includes('hours ago')) {
@@ -91,7 +91,7 @@ function eYear(txt) {
     }
     if (txt.includes('minute ago')) {
         var T = txt.replace("minute ago", "").trim()
-        var L = 'does ' + T + ' minute'
+        var L = 'does ' + T + ' minutes'
         return L
     }
     if (txt.includes('minutes ago')) {
