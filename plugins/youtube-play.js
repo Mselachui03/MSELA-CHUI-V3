@@ -2,24 +2,24 @@ import fetch from 'node-fetch'
 import yts from 'yt-search'
 
 let handler = async (m, { conn: star, command, args, text, usedPrefix }) => {
-  if (!text) return star.reply(m.chat, '🐯 Enter the title of a YouTube video or song.\n\n`Example:`\n' + `> *${usedPrefix + command}* Gemini Aaliyah - If Only`, m, rcanal)
-await m.react('🕓')
-try {
+  if (!text) return star.reply(m.chat, '🚩 Ingresa el título de un video o canción de YouTube.\n\n`Ejemplo:`\n' + `> *${usedPrefix + command}* Gemini Aaliyah - If Only`, m, rcanal)
+    await m.react('🕓')
+    try {
     let res = await search(args.join(" "))
     let img = await (await fetch(`${res[0].image}`)).buffer()
     let txt = '`乂  Y O U T U B E  -  P L A Y`\n\n'
-       txt += `	✩   *Title* : ${res[0].title}\n`
-       txt += `	✩   *Duration* : ${secondString(res[0].duration.seconds)}\n`
-       txt += `	✩   *Published* : ${eYear(res[0].ago)}\n`
-       txt += `	✩   *Canal* : ${res[0].author.name || 'A stranger'}\n`
+       txt += `	✩   *Título* : ${res[0].title}\n`
+       txt += `	✩   *Duración* : ${secondString(res[0].duration.seconds)}\n`
+       txt += `	✩   *Publicado* : ${eYear(res[0].ago)}\n`
+       txt += `	✩   *Canal* : ${res[0].author.name || 'Desconocido'}\n`
        txt += `	✩   *Url* : ${'https://youtu.be/' + res[0].videoId}\n\n`
-       txt += `> *-* To download reply to this message with *Video* o *Audio*.`
+       txt += `> *-* Para descargar responde a este mensaje con *Video* o *Audio*.`
 await star.sendFile(m.chat, img, 'thumbnail.jpg', txt, m, null, rcanal)
 await m.react('✅')
 } catch {
 await m.react('✖️')
 }}
-handler.help = ['play *<search>*']
+handler.help = ['play *<búsqueda>*']
 handler.tags = ['downloader']
 handler.command = ['play']
 //handler.register = true 
@@ -44,10 +44,10 @@ function secondString(seconds) {
   const h = Math.floor((seconds % (3600 * 24)) / 3600);
   const m = Math.floor((seconds % 3600) / 60);
   const s = Math.floor(seconds % 60);
-  const dDisplay = d > 0 ? d + (d == 1 ? ' Day, ' : ' Days, ') : '';
-  const hDisplay = h > 0 ? h + (h == 1 ? ' Time, ' : ' Hours, ') : '';
-  const mDisplay = m > 0 ? m + (m == 1 ? ' minute, ' : ' Minutes, ') : '';
-  const sDisplay = s > 0 ? s + (s == 1 ? ' Second' : ' seconds) : '';
+  const dDisplay = d > 0 ? d + (d == 1 ? ' Día, ' : ' Días, ') : '';
+  const hDisplay = h > 0 ? h + (h == 1 ? ' Hora, ' : ' Horas, ') : '';
+  const mDisplay = m > 0 ? m + (m == 1 ? ' Minuto, ' : ' Minutos, ') : '';
+  const sDisplay = s > 0 ? s + (s == 1 ? ' Segundo' : ' Segundos') : '';
   return dDisplay + hDisplay + mDisplay + sDisplay;
 }
 
@@ -61,52 +61,52 @@ function eYear(txt) {
     }
     if (txt.includes('month ago')) {
         var T = txt.replace("month ago", "").trim()
-        var L = 'does '  + T + ' we'
+        var L = 'hace '  + T + ' mes'
         return L
     }
     if (txt.includes('months ago')) {
         var T = txt.replace("months ago", "").trim()
-        var L = 'does ' + T + ' months'
+        var L = 'hace ' + T + ' meses'
         return L
     }
     if (txt.includes('year ago')) {
         var T = txt.replace("year ago", "").trim()
-        var L = 'does ' + T + ' year'
+        var L = 'hace ' + T + ' año'
         return L
     }
     if (txt.includes('years ago')) {
         var T = txt.replace("years ago", "").trim()
-        var L = 'does ' + T + ' years'
+        var L = 'hace ' + T + ' años'
         return L
     }
     if (txt.includes('hour ago')) {
         var T = txt.replace("hour ago", "").trim()
-        var L = 'does ' + T + ' time'
+        var L = 'hace ' + T + ' hora'
         return L
     }
     if (txt.includes('hours ago')) {
         var T = txt.replace("hours ago", "").trim()
-        var L = 'does ' + T + ' hours'
+        var L = 'hace ' + T + ' horas'
         return L
     }
     if (txt.includes('minute ago')) {
         var T = txt.replace("minute ago", "").trim()
-        var L = 'does ' + T + ' minutes'
+        var L = 'hace ' + T + ' minuto'
         return L
     }
     if (txt.includes('minutes ago')) {
         var T = txt.replace("minutes ago", "").trim()
-        var L = 'does ' + T + ' minutes'
+        var L = 'hace ' + T + ' minutos'
         return L
     }
     if (txt.includes('day ago')) {
         var T = txt.replace("day ago", "").trim()
-        var L = 'does ' + T + ' day'
+        var L = 'hace ' + T + ' dia'
         return L
     }
     if (txt.includes('days ago')) {
         var T = txt.replace("days ago", "").trim()
-        var L = 'does ' + T + ' days'
+        var L = 'hace ' + T + ' dias'
         return L
     }
     return txt
