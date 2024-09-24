@@ -11,9 +11,9 @@ await m.react('🕓')
        txt += `	✩   *Title* : ${res[0].title}\n`
        txt += `	✩   *Duration* : ${secondString(res[0].duration.seconds)}\n`
        txt += `	✩   *Published* : ${eYear(res[0].ago)}\n`
-       txt += `	✩   *Canal* : ${res[0].author.name || 'Desconocido'}\n`
+       txt += `	✩   *Name* : ${res[0].author.name || 'Desconocido'}\n`
        txt += `	✩   *Url* : ${'https://youtu.be/' + res[0].videoId}\n\n`
-       txt += `> *-* To download reply to this message with *Video* or *Audio*.`
+       txt += `> *-* MSELA-CHUI-V3 To download reply to this message with *Video* or *Audio*.`
 await star.sendFile(m.chat, img, 'thumbnail.jpg', txt, m, null, rcanal)
 await m.react('✅')
 } catch {
@@ -61,52 +61,52 @@ function eYear(txt) {
     }
     if (txt.includes('month ago')) {
         var T = txt.replace("month ago", "").trim()
-        var L = 'hace '  + T + ' mes'
+        var L = 'does '  + T + ' month'
         return L
     }
     if (txt.includes('months ago')) {
         var T = txt.replace("months ago", "").trim()
-        var L = 'hace ' + T + ' meses'
+        var L = 'does ' + T + ' months'
         return L
     }
     if (txt.includes('year ago')) {
         var T = txt.replace("year ago", "").trim()
-        var L = 'hace ' + T + ' año'
+        var L = 'does ' + T + ' year'
         return L
     }
     if (txt.includes('years ago')) {
         var T = txt.replace("years ago", "").trim()
-        var L = 'hace ' + T + ' años'
+        var L = 'does ' + T + ' years'
         return L
     }
     if (txt.includes('hour ago')) {
         var T = txt.replace("hour ago", "").trim()
-        var L = 'hace ' + T + ' hora'
+        var L = 'does ' + T + ' hour'
         return L
     }
     if (txt.includes('hours ago')) {
         var T = txt.replace("hours ago", "").trim()
-        var L = 'hace ' + T + ' horas'
+        var L = 'does ' + T + ' hours'
         return L
     }
     if (txt.includes('minute ago')) {
         var T = txt.replace("minute ago", "").trim()
-        var L = 'hace ' + T + ' minuto'
+        var L = 'does ' + T + ' minute'
         return L
     }
     if (txt.includes('minutes ago')) {
         var T = txt.replace("minutes ago", "").trim()
-        var L = 'hace ' + T + ' minutos'
+        var L = 'does ' + T + ' minutes'
         return L
     }
     if (txt.includes('day ago')) {
         var T = txt.replace("day ago", "").trim()
-        var L = 'hace ' + T + ' dia'
+        var L = 'does ' + T + ' day'
         return L
     }
     if (txt.includes('days ago')) {
         var T = txt.replace("days ago", "").trim()
-        var L = 'hace ' + T + ' dias'
+        var L = 'does ' + T + ' days'
         return L
     }
     return txt
