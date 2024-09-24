@@ -11,18 +11,18 @@ let upload = await uploadFile(media)
 let shp = await fetch(`https://apis-starlights-team.koyeb.app/starlight/chazam?url=${upload.files[0].url}`, { headers: { 'Content-Type': 'application/json' }})
 let json = await shp.json()
 let app = { title: json.title, artist: json.artist, type: json.type, url: json.url }
-let txt = `*\`-• C H A Z A M - M U S I C •-\`*\n\n` +
-`🍟 *Nombre:* ${app.title}\n` +
-`🍟 *Artista:* ${app.artist}\n` +
-`🍟 *Tipo:* ${app.type}\n` +
-`🍟 *Link:* ${app.url}`
+let txt = `*\`-• S H A Z A M - M U S I C •-\`*\n\n` +
+`🐯 *Name:* ${app.title}\n` +
+`🐯 *Artist:* ${app.artist}\n` +
+`🐯 *Type:* ${app.type}\n` +
+`🐯 *Link:* ${app.url}`
 m.reply(txt)
 } else {
-return conn.reply(m.chat, '🚩 Responde a un *Audio/Video.*', m, rcanal)
+return conn.reply(m.chat, '🐯 Responds to a *Audio/Video.*', m, rcanal)
 }}
-handler.help = ['chazam *<Audio/Video>*']
+handler.help = ['shazam *<Audio/Video>*']
 handler.tags = ['tools']
-handler.command = /^(chazam)$/i
+handler.command = /^(shazam)$/i
 //handler.limit = 3
 handler.register = true
 export default handler
