@@ -22,7 +22,7 @@ let txt = '`乂  Y O U T U B E  -  P L A Y`\n\n'
 	txt += `	✩   *Author* : ${vid.author.name}\n`
 	txt += `	✩   *Published* : ${eYear(vid.ago)}\n`
 	txt += `	✩   *Url* : ${'https://youtu.be/' + vid.videoId}\n\n`
-	txt += `> *- ↻ Audio is being sent, please wait a moment, I'm slow. . .*`
+	txt += `> *- MSELA-CHUI-V3🐯↻ Audio is being sent, please wait a moment, I'm slow. . .*`
 await conn.sendFile(m.chat, vid.thumbnail, 'thumbnail.jpg', txt, m, null, rcanal)
 try {
 let yt = await fg.yta(vid.url, q)
