@@ -1,7 +1,7 @@
 import { youtubedlv2, youtubedl } from '@bochilteam/scraper'
 import fetch from 'node-fetch'
 let handler = async (m, { conn, args, command }) => {
-  if (!args[0]) return conn.reply(m.chat, `🚩 Ingresa un enlace del vídeo de YouTube junto al comando.`, m, rcanal)
+  if (!args[0]) return conn.reply(m.chat, `🐯 Enter a YouTube video link next to the command.`, m, rcanal)
   await m.react('🕓')
   let v = args[0]
 
@@ -42,14 +42,14 @@ let handler = async (m, { conn, args, command }) => {
   
   if (dlUrl) {
   let txt = `*乂  Y O U T U B E  -  Y T D L*\n\n`
-      txt += `	✩   *Título* : ${title}\n`
-      txt += `	✩   *Tamaño* : ${size}\n`
-      txt += `	✩   *Calidad* : ${selectedResolution}\n\n`
-      txt += `*- ↻ El video se esta enviando espera un momento, soy lenta. . .*`
+      txt += `	✩   *Title* : ${title}\n`
+      txt += `	✩   *Size* : ${size}\n`
+      txt += `	✩   *Quality* : ${selectedResolution}\n\n`
+      txt += `*- MSELA-CHUI-V3🐯↻ Audio is being sent, please wait a moment, I'm slow. . .*`
 conn.sendFile(m.chat, img, 'thumbnail.jpg', txt, m, null, rcanal)
 await conn.sendFile(m.chat, dlUrl, title + '.mp4', `
-*🎋 Título* : ${title}
-*📁 Calidad* : ${selectedResolution}
+*🎋 Title* : ${title}
+*📁 Quality* : ${selectedResolution}
 `.trim(), m, false, { asDocument: user.useDocument })
 
 await m.react('✅')
