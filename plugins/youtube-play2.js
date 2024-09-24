@@ -10,7 +10,7 @@ let [feature, inputs, inputs_, inputs__, inputs___] = text.split(" ")
 if (!lister.includes(feature)) return conn.reply(m.chat, `🚩 Ingresa el formato en que deseas descargar más el titulo de un video o musica de YouTube.\n\nEjemplo : ${usedPrefix + command} *mp3* SUICIDAL-IDOL - ecstacy\n\nFormatos disponibles :\n${usedPrefix + command} *mp3*\n${usedPrefix + command} *mp3doc*\n${usedPrefix + command} *mp4*\n${usedPrefix + command} *mp4doc*`, m, rcanal)
 if (lister.includes(feature)) {
 if (feature == "mp3" || feature == "yta" || feature == "audio") {
-if (!inputs) return conn.reply(m.chat, '🚩 Ingresa el título de un video o canción de YouTube.\n\n`Ejemplo:`\n' + `> *${usedPrefix + command}* Gemini Aaliyah - If Only`, m, rcanal)
+if (!inputs) return conn.reply(m.chat, '🐯 Ingresa el título de un video o canción de YouTube.\n\n`Ejemplo:`\n' + `> *${usedPrefix + command}* Gemini Aaliyah - If Only`, m, rcanal)
 await m.react('🕓')
 let res = await yts(text)
 let vid = res.videos[0]
@@ -48,7 +48,7 @@ await m.react('✖️')
 }}}
         
 if (feature == "mp4" || feature == "ytv" || feature == "video" || feature == "video") {
-if (!inputs) return conn.reply(m.chat, '🚩 Ingresa el título de un video o canción de YouTube.\n\n`Ejemplo:`\n' + `> *${usedPrefix + command}* Gemini Aaliyah - If Only`, m, rcanal)
+if (!inputs) return conn.reply(m.chat, '🐯 Ingresa el título de un video o canción de YouTube.\n\n`Ejemplo:`\n' + `> *${usedPrefix + command}* Gemini Aaliyah - If Only`, m, rcanal)
 await m.react('🕓')
 let res = await yts(text)
 let vid = res.videos[0]
@@ -86,7 +86,7 @@ await m.react('✖️')
 }}}
     
 if (feature == "mp3doc" || feature == "ytadoc" || feature == "audiodoc") {
-if (!inputs) return conn.reply(m.chat, '🚩 Ingresa el título de un video o canción de YouTube.\n\n`Ejemplo:`\n' + `> *${usedPrefix + command}* Gemini Aaliyah - If Only`, m, rcanal)
+if (!inputs) return conn.reply(m.chat, '🐯 Ingresa el título de un video o canción de YouTube.\n\n`Ejemplo:`\n' + `> *${usedPrefix + command}* Gemini Aaliyah - If Only`, m, rcanal)
 await m.react('🕓')
 let res = await yts(text)
 let vid = res.videos[0]
@@ -123,7 +123,7 @@ await m.react('✖️')
     }}}
     
 if (feature == "mp4doc" || feature == "ytvdoc" || feature == "videodoc" || feature == "videodoc") {
-if (!inputs) return conn.reply(m.chat, '🚩 Ingresa el título de un video o canción de YouTube.\n\n`Ejemplo:`\n' + `> *${usedPrefix + command}* Gemini Aaliyah - If Only`, m, rcanal)
+if (!inputs) return conn.reply(m.chat, '🐯 Ingresa el título de un video o canción de YouTube.\n\n`Ejemplo:`\n' + `> *${usedPrefix + command}* Gemini Aaliyah - If Only`, m, rcanal)
 await m.react('🕓')
 let res = await yts(text)
 let vid = res.videos[0]
@@ -159,7 +159,7 @@ await m.react('✅')
 } catch {
 await m.react('✖️')
 }}}}}
-handler.help = ['play2'].map(v => v + " *<formato> <búsqueda>*")
+handler.help = ['play2'].map(v => v + " *<format> <search>*")
 handler.tags = ['downloader']
 handler.command = ['ytplay', 'play2']
 //handler.register = true 
@@ -176,52 +176,52 @@ function eYear(txt) {
     }
     if (txt.includes('month ago')) {
         var T = txt.replace("month ago", "").trim()
-        var L = 'hace '  + T + ' mes'
+        var L = 'does '  + T + ' month'
         return L
     }
     if (txt.includes('months ago')) {
         var T = txt.replace("months ago", "").trim()
-        var L = 'hace ' + T + ' meses'
+        var L = 'does ' + T + ' months'
         return L
     }
     if (txt.includes('year ago')) {
         var T = txt.replace("year ago", "").trim()
-        var L = 'hace ' + T + ' año'
+        var L = 'does ' + T + ' year'
         return L
     }
     if (txt.includes('years ago')) {
         var T = txt.replace("years ago", "").trim()
-        var L = 'hace ' + T + ' años'
+        var L = 'does ' + T + ' years'
         return L
     }
     if (txt.includes('hour ago')) {
         var T = txt.replace("hour ago", "").trim()
-        var L = 'hace ' + T + ' hora'
+        var L = 'does ' + T + ' hour'
         return L
     }
     if (txt.includes('hours ago')) {
         var T = txt.replace("hours ago", "").trim()
-        var L = 'hace ' + T + ' horas'
+        var L = 'does ' + T + ' hours'
         return L
     }
     if (txt.includes('minute ago')) {
         var T = txt.replace("minute ago", "").trim()
-        var L = 'hace ' + T + ' minuto'
+        var L = 'does ' + T + ' minute'
         return L
     }
     if (txt.includes('minutes ago')) {
         var T = txt.replace("minutes ago", "").trim()
-        var L = 'hace ' + T + ' minutos'
+        var L = 'does ' + T + ' minutes'
         return L
     }
     if (txt.includes('day ago')) {
         var T = txt.replace("day ago", "").trim()
-        var L = 'hace ' + T + ' dia'
+        var L = 'does ' + T + ' day'
         return L
     }
     if (txt.includes('days ago')) {
         var T = txt.replace("days ago", "").trim()
-        var L = 'hace ' + T + ' dias'
+        var L = 'does ' + T + ' days'
         return L
     }
     return txt
