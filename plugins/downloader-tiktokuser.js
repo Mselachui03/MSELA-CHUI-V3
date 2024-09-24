@@ -1,8 +1,8 @@
 import Starlights from '@StarlightsTeam/Scraper'
 
 let handler = async (m, { conn, usedPrefix, command, text }) => {
-  if (!text) return conn.reply(m.chat, '🚩 Ingresa el nombre de usuario de TikTok que deseas buscar.\n\n`Ejemplo:`\n' + `> *${usedPrefix + command}* yuuzu_u_`, m, rcanal)
-  await m.react('🕓')
+  if (!text) return conn.reply(m.chat, '🐯 Enter the TikTok username you want to search for.\n\n`Example:`\n' + `> *${usedPrefix + command}* yuuzu_u_`, m, rcanal)
+await m.react('🕓')
   try {
     let data = await Starlights.tiktokuser(text)
 
@@ -11,17 +11,17 @@ let handler = async (m, { conn, usedPrefix, command, text }) => {
         let video = data[i]
 
         let txt = '`乂  T I K T O K  -  D O W N L O A D`\n\n'
-            txt += `    ✩  *Nro* : ${video.nro}\n`
-            txt += `    ✩  *Título* : ${video.title}\n`
-            txt += `    ✩  *Autor* : ${video.author}\n`
-            txt += `    ✩  *Duración* : ${video.duration} segundos\n`
-            txt += `    ✩  *Vistas* : ${video.views}\n`
+            txt += `    ✩  *Dream* : ${video.nro}\n`
+            txt += `    ✩  *Title* : ${video.title}\n`
+            txt += `    ✩  *Author* : ${video.author}\n`
+            txt += `    ✩  *Duration* : ${video.duration} segundos\n`
+            txt += `    ✩  *Views* : ${video.views}\n`
             txt += `    ✩  *Likes* : ${video.likes}\n`
-            txt += `    ✩  *Comentarios* : ${video.comments_count}\n`
-            txt += `    ✩  *Compartidos* : ${video.share_count}\n`
-            txt += `    ✩  *Publicado* : ${video.published}\n`
-            txt += `    ✩  *Descargas* : ${video.download_count}\n\n`
-            txt += `> 🚩 ${textbot}`
+            txt += `    ✩  *Comments* : ${video.comments_count}\n`
+            txt += `    ✩  *shared* : ${video.share_count}\n`
+            txt += `    ✩  *Published* : ${video.published}\n`
+            txt += `    ✩  *Downloads* : ${video.download_count}\n\n`
+            txt += `> 🐯 ${textbot}`
 
         await conn.sendFile(m.chat, video.dl_url, `video_${i + 1}.mp4`, txt, m, null, rcanal)
       }
@@ -34,7 +34,7 @@ let handler = async (m, { conn, usedPrefix, command, text }) => {
   }
 }
 handler.tags = ['downloader']
-handler.help = ['tiktokuser *<usuario>*']
+handler.help = ['tiktokuser *<user>*']
 handler.command = ['tiktokuser', 'tiktokus']
 handler.register = true
 
