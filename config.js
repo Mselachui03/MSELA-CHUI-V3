@@ -1,4 +1,4 @@
-import { watchFile, unwatchFile } from 'fs' 
+ import { watchFile, unwatchFile } from 'fs' 
 import chalk from 'chalk'
 import { fileURLToPath } from 'url'
 import fs from 'fs'
@@ -45,7 +45,7 @@ global.miniurl = fs.readFileSync('./storage/img/miniurl.jpg')
 //*─ׄ─ׅ─ׄ─⭒─ׄ─ׅ─ׄ─⭒─ׄ─ׅ─ׄ─⭒─ׄ─ׅ─ׄ─⭒─ׄ─ׅ─ׄ─⭒─ׄ─ׅ─ׄ─*
 
 global.group = 'https://chat.whatsapp.com/G3Yo10svOfY8pfgYmHE8G0'
-global.rcanal = 'https://whatsapp.com/channel/0029VakhqAaLtOjBJOL9Wn1q'
+global.canal = 'https://whatsapp.com/channel/0029VakhqAaLtOjBJOL9Wn1q'
 
 //*─ׄ─ׅ─ׄ─⭒─ׄ─ׅ─ׄ─⭒─ׄ─ׅ─ׄ─⭒─ׄ─ׅ─ׄ─⭒─ׄ─ׅ─ׄ─⭒─ׄ─ׅ─ׄ─*
 
