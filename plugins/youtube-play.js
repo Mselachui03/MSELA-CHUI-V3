@@ -13,7 +13,7 @@ await m.react('🕓')
        txt += `	✩   *Published* : ${eYear(res[0].ago)}\n`
        txt += `	✩   *Name* : ${res[0].author.name || 'Desconocido'}\n`
        txt += `	✩   *Url* : ${'https://youtu.be/' + res[0].videoId}\n\n`
-       txt += `> *-* MSELA-CHUI-V3 To download reply to this message with *Video* or *Audio*.`
+       txt += `> *-*MSELA-CHUI-V3 To download reply to this message with *Video* or *Audio*.`
 await star.sendFile(m.chat, img, 'thumbnail.jpg', txt, m, null, rcanal)
 await m.react('✅')
 } catch {
