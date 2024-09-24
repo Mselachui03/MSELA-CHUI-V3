@@ -8,8 +8,8 @@ let handler = async (m, { conn, usedPrefix, command, args, isOwner, isAdmin, isR
   let isAll = false, isUser = false
   switch (type) {
   case 'welcome':
-    case 'bv':
-    case 'bienvenida':
+    case 'wel':
+    case 'welcome':
       if (!m.isGroup) {
         if (!isOwner) {
           global.dfail('group', m, conn)
@@ -19,11 +19,11 @@ let handler = async (m, { conn, usedPrefix, command, args, isOwner, isAdmin, isR
         global.dfail('admin', m, conn)
         throw false
       }
-      chat.bienvenida = isEnable
+      chat.welcome = isEnable
       break
      
      case 'autoread':
-    case 'autoleer':
+    case 'autoread':
       isAll = true
       if (!isROwner) {
         global.dfail('rowner', m, conn)
@@ -33,7 +33,7 @@ let handler = async (m, { conn, usedPrefix, command, args, isOwner, isAdmin, isR
       break
 
     case 'document':
-    case 'documento':
+    case 'document':
     isUser = true
     user.useDocument = isEnable
     break
@@ -59,7 +59,7 @@ let handler = async (m, { conn, usedPrefix, command, args, isOwner, isAdmin, isR
     break
 
      case 'antiarabes':
-     case 'antinegros':
+     case 'anti-blacks':
        if (m.isGroup) {
          if (!(isAdmin || isOwner)) {
            global.dfail('admin', m, conn)
@@ -69,37 +69,36 @@ let handler = async (m, { conn, usedPrefix, command, args, isOwner, isAdmin, isR
        break
     default:
       if (!/[01]/.test(command)) return m.reply(`
-*🚩 Ingresa una opción para habilitar o deshabilitar*
+*🐯 Enter an option to enable or disable*
 
-*≡ Lista de opciones*
-*Tipo :* welcome
-*Descripción :* Des/Activa la *Bienvenida* y *Despedida* para Grupos
+*≡ List of options*
+*Type :* welcome
+*Description :* Dis/Activate the *Welcome* and *Farewell* for Groups
+*Type :* nsfw 
+*Description :* Disable/Enable *NSFW* commands for Groups
 
-*Tipo :* nsfw 
-*Descripción :* Des/Activa los comandos *NSFW* para Grupos
+*Type :* antiarabes 
+*Description :* Disable/Enable *AntiArabs* for Groups
 
-*Tipo :* antiarabes 
-*Descripción :* Des/Activa el *AntiArabes* para Grupos
+*Type :* antilink 
+*Description :* Disable/Enable *AntiLink* for Groups
 
-*Tipo :* antilink 
-*Descripción :* Des/Activa el *AntiLink* para Grupos
+*Type :* autoread 
+*Description :* Disable/Enable *AutoRead* for the Bot
 
-*Tipo :* autoread 
-*Descripción :* Des/Activa el *AutoRead* para el Bot
+*Type :* document 
+*Description :* Dis/Enables *Download In Documents* for the User
 
-*Tipo :* document 
-*Descripción :* Des/Activa la *Descarga En Documentos* para el Usuario
-
-*• Ejemplo:*
+*• Example:*
 *- ${usedPrefix + command}* welcome
 `.trim())
       throw false
   }
-  m.reply(`La función *${type}* se *${isEnable ? 'activó' : 'desactivó'}* ${isAll ? 'para este bot' : isUser ? '' : 'para este chat'}`)
+  m.reply(`The function *${type}* with *${isEnable ? 'asset' : 'deactivated'}* ${isAll ? 'pear is bot' : isUser ? '' : 'for this chat'}`)
 }
 
 handler.help = ['enable', 'disable']
-handler.tags = ['nable']
+handler.tags = ['able']
 handler.command = /^(enable|disable|on|off|1|0)$/i
 
 export default handler
