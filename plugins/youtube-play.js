@@ -2,24 +2,24 @@ import fetch from 'node-fetch'
 import yts from 'yt-search'
 
 let handler = async (m, { conn: star, command, args, text, usedPrefix }) => {
-  if (!text) return star.reply(m.chat, '🚩 Ingresa el título de un video o canción de YouTube.\n\n`Ejemplo:`\n' + `> *${usedPrefix + command}* Gemini Aaliyah - If Only`, m, rcanal)
-    await m.react('🕓')
+  if (!text) return star.reply(m.chat, '🐯 Enter the title of a YouTube video or song.\n\n`Example:`\n' + `> *${usedPrefix + command}* Gemini Aaliyah - If Only`, m, rcanal)
+await m.react('🕓')
     try {
     let res = await search(args.join(" "))
     let img = await (await fetch(`${res[0].image}`)).buffer()
     let txt = '`乂  Y O U T U B E  -  P L A Y`\n\n'
-       txt += `	✩   *Título* : ${res[0].title}\n`
-       txt += `	✩   *Duración* : ${secondString(res[0].duration.seconds)}\n`
-       txt += `	✩   *Publicado* : ${eYear(res[0].ago)}\n`
+       txt += `	✩   *Title* : ${res[0].title}\n`
+       txt += `	✩   *Duration* : ${secondString(res[0].duration.seconds)}\n`
+       txt += `	✩   *Published* : ${eYear(res[0].ago)}\n`
        txt += `	✩   *Canal* : ${res[0].author.name || 'Desconocido'}\n`
        txt += `	✩   *Url* : ${'https://youtu.be/' + res[0].videoId}\n\n`
-       txt += `> *-* Para descargar responde a este mensaje con *Video* o *Audio*.`
+       txt += `> *-*MSELA-CHUI-V3🐯 To download reply to this message with *Video* or *Audio*.`
 await star.sendFile(m.chat, img, 'thumbnail.jpg', txt, m, null, rcanal)
 await m.react('✅')
 } catch {
 await m.react('✖️')
 }}
-handler.help = ['play *<búsqueda>*']
+handler.help = ['play *<search>*']
 handler.tags = ['downloader']
 handler.command = ['play']
 //handler.register = true 
@@ -61,52 +61,52 @@ function eYear(txt) {
     }
     if (txt.includes('month ago')) {
         var T = txt.replace("month ago", "").trim()
-        var L = 'hace '  + T + ' mes'
+        var L = 'does '  + T + ' month'
         return L
     }
     if (txt.includes('months ago')) {
         var T = txt.replace("months ago", "").trim()
-        var L = 'hace ' + T + ' meses'
+        var L = 'does ' + T + ' months'
         return L
     }
     if (txt.includes('year ago')) {
         var T = txt.replace("year ago", "").trim()
-        var L = 'hace ' + T + ' año'
+        var L = 'does ' + T + ' year'
         return L
     }
     if (txt.includes('years ago')) {
         var T = txt.replace("years ago", "").trim()
-        var L = 'hace ' + T + ' años'
+        var L = 'does ' + T + ' years'
         return L
     }
     if (txt.includes('hour ago')) {
         var T = txt.replace("hour ago", "").trim()
-        var L = 'hace ' + T + ' hora'
+        var L = 'does ' + T + ' hour'
         return L
     }
     if (txt.includes('hours ago')) {
         var T = txt.replace("hours ago", "").trim()
-        var L = 'hace ' + T + ' horas'
+        var L = 'does ' + T + ' hours'
         return L
     }
     if (txt.includes('minute ago')) {
         var T = txt.replace("minute ago", "").trim()
-        var L = 'hace ' + T + ' minuto'
+        var L = 'does ' + T + ' minute'
         return L
     }
     if (txt.includes('minutes ago')) {
         var T = txt.replace("minutes ago", "").trim()
-        var L = 'hace ' + T + ' minutos'
+        var L = 'does ' + T + ' minutes'
         return L
     }
     if (txt.includes('day ago')) {
         var T = txt.replace("day ago", "").trim()
-        var L = 'hace ' + T + ' dia'
+        var L = 'does ' + T + ' day'
         return L
     }
     if (txt.includes('days ago')) {
         var T = txt.replace("days ago", "").trim()
-        var L = 'hace ' + T + ' dias'
+        var L = 'does ' + T + ' day'
         return L
     }
     return txt
