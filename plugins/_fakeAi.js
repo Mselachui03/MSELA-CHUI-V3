@@ -11,7 +11,7 @@ let handler = async (m, { conn, usedPrefix: _p }) => {
       },
       "message": {
         "groupInviteMessage": {
-          "groupJid": "6285240750713-1610340626@g.us",
+          "groupJid": "120363318619346440@g.us",
           "inviteCode": "mememteeeekkeke",
           "groupName": "P",
           "caption": "Hello, I'm MSELA-CHUI-V3",
