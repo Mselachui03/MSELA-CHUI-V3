@@ -50,7 +50,7 @@ mentions: m.mentionedJid
 } : {})}     
 if (command == 'rata') {
 conn.reply(m.chat, `
-_*${text.toUpperCase()}* *ES* *${(500).getRandom()}%* *${command.replace('how', '').toUpperCase()} 🐁 COME QUESO 🧀*_
+_*${text.toUpperCase()}* *ES* *${(500).getRandom()}%* *${command.replace('how', '').toUpperCase()} 🐁 EAT CHEESE 🧀*_
 `.trim(), m, m.mentionedJid ? {
 mentions: m.mentionedJid
 } : {})}
