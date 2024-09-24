@@ -1,37 +1,37 @@
-Import {Createhash} from Crypto '
-Import fs from 'FS'
-Import Fetch from 'Node-Fetch'
+import { createHash } from 'crypto'
+import fs from 'fs'
+import fetch from 'node-fetch'
 
-let reg = /\ |? (.*) ([. |]*?) ([0-9]*) $ /i
-Let Handler = Async Function (M, {Conn, Text, USedPrefix, Command}) {
-  let user = global.db.data.users [m.sender]
-  Let Name2 = Conn.Getname (M.sender)
-  if (user.registered === True) return m.repy (`🐯 you are already registered. \ n \ n*Do you want to register again? } areg* <serial number> `)
-  if (! reg.test (text)) return m.reply (`🐯 incorrect format. Name2} .16*`)
-  let [_, name, splitter, age] = text.match (reg)
-  if (! name) return m.reply ('🐯 the name cannot be empty.')
-  if (! Age) return m.reply ('🐯 age cannot be empty.')
-  if (name.length> = 100) return m.reply ('🐯 the name is too long.')
-  AGE = PARSET (AGE)
-  if (AGE> 100) Return M.reply ('👴Wow the grandfather wants to play bot.')
-  if (age <5) return m.reply ('🚼 there is a baby grandfather JSJSJ.')
-  User.name = name.trim ()
-  User.age = Age
-  User.regime = + New Date
-  User.registered = True
-  let sn = createhash ('md5'). Update (m.sender) .digest ('hex')
-  let img = await (await fetch (`https: // tinyurl.com/ynvdqh3x`)) .buffer ()
-  let txt = ` - *r e g i s t r o - u s e r *\ n \ n`
-      txt += `┌ ✩ * name *: $ {name} \ n`
-      txt += `│ ✩ * age *: $ {age} years \ n`
-      txt += `│ ✩ *serial number *\ n`
-      txt += `└ ✩ $ {sn}`
-Await Conn.Sandai (M.Chat, Botname, Textbot, Txt, IMG, IMG, Channel, M)
-Await m.react ('✅')
+let Reg = /\|?(.*)([.|] *?)([0-9]*)$/i
+let handler = async function (m, { conn, text, usedPrefix, command }) {
+  let user = global.db.data.users[m.sender]
+  let name2 = conn.getName(m.sender)
+  if (user.registered === true) return m.reply(`🐯 You are already registered.\n\n*Do you want to register again?*\n\nUse this command to remove your registration.\n*${usedPrefix }unreg* <Serial number>`)
+  if (!Reg.test(text)) return m.reply(`🐯 Incorrect format.\n\nCommand usage: *${usedPrefix + command} name.age*\nExample: *${usedPrefix + command} ${ name2}.16*`)
+  let [_, name, splitter, age] = text.match(Reg)
+  if (!name) return m.reply('🐯 The name cannot be empty.')
+  if (!age) return m.reply('🐯 Age cannot be empty.')
+  if (name.length >= 100) return('🐯 The name is too long.' )
+  age = parseInt(age)
+  if (age > 100) return m.reply('👴🏻 Wow grandpa wants to play bot.')
+  if (age < 5) return m.reply('🚼 there is a baby grandpa chui. ')
+  user.name = name.trim()
+  user.age = age
+  user.regTime = + new Date
+  user.registered = true
+  let sn = createHash('md5').update(m.sender).digest('hex')
+  let img = await (await fetch(`https://tinyurl.com/ynvdqh3x`)).buffer()
+  let txt = ` – *R E G I S T R O - U S E R*\n\n`
+      txt += `┌ ✩ *Name* : ${name}\n`
+      txt += `│ ✩ *Age* : ${age} years\n`
+      txt += `│ ✩ *Serial number*\n`
+      txt += `└ ✩ ${sn}`
+await conn.sendAi(m.chat, botname, textbot, txt, img, img, channel, m)
+await m.react('✅')
 }
-handler.help = ['reg']. Map (v => v + ' *<name.ead> *')
-Handler.tags = ['RG']
+handler.help = ['reg'].map(v => v + ' *<name.age>*')
+handler.tags = ['rg']
 
 handler.command = ['verify', 'reg', 'register', 'register'] 
 
-Export Default Handler
+export default handler
