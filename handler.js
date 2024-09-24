@@ -293,7 +293,7 @@ export async function handler(chatUpdate) {
                 else
                     m.exp += xp
                 if (!isPrems && plugin.limit && global.db.data.users[m.sender].limit < plugin.limit * 1) {
-                    conn.reply(m.chat, `Your *⭐ Stars* are sold out`, m, rcanal)
+                    conn.reply(m.chat, `Your *⭐ Stars* are sold out`, m)
                     continue
                 }
                 let extra = {
@@ -341,7 +341,7 @@ export async function handler(chatUpdate) {
                         }
                     }
                     if (m.limit)
-                        conn.reply(m.chat, `You used *${+m.limit}* ⭐`, m, rcanal)
+                        conn.reply(m.chat, `You used *${+m.limit}* ⭐`, m)
                 }
                 break
             }
@@ -414,7 +414,7 @@ global.dfail = (type, m, conn, usedPrefix) => {
         unreg: `✯ Hello, to use this command you must be *Registered.*\n\nTo use the bot you must register first\n\nUse: */reg name.age*\n\n_Example: */reg おMselachui.xyz.18* _\n\nDo not put the * *`,
         restrict: `✯ Hello, this feature is *disabled.*`  
     }[type]
-    if (msg) return conn.reply(m.chat, msg, m, rcanal).then(_ => m.react('✖️'))
+    if (msg) return conn.reply(m.chat, msg, m).then(_ => m.react('✖️'))
 }
 
 let file = global.__filename(import.meta.url, true)
