@@ -11,7 +11,7 @@ await m.react('🕓')
        txt += `	✩   *Title* : ${res[0].title}\n`
        txt += `	✩   *Duration* : ${secondString(res[0].duration.seconds)}\n`
        txt += `	✩   *Published* : ${eYear(res[0].ago)}\n`
-       txt += `	✩   *Name* : ${res[0].author.name || 'Desconocido'}\n`
+       txt += `	✩   *Name* : ${res[0].author.name || 'A stranger'}\n`
        txt += `	✩   *Url* : ${'https://youtu.be/' + res[0].videoId}\n\n`
        txt += `> *-*MSELA-CHUI-V3 To download reply to this message with *Video* or *Audio*.`
 await star.sendFile(m.chat, img, 'thumbnail.jpg', txt, m, null, rcanal)
@@ -19,7 +19,7 @@ await m.react('✅')
 } catch {
 await m.react('✖️')
 }}
-handler.help = ['play *<búsqueda>*']
+handler.help = ['play *<search>*']
 handler.tags = ['downloader']
 handler.command = ['play']
 //handler.register = true 
@@ -44,10 +44,10 @@ function secondString(seconds) {
   const h = Math.floor((seconds % (3600 * 24)) / 3600);
   const m = Math.floor((seconds % 3600) / 60);
   const s = Math.floor(seconds % 60);
-  const dDisplay = d > 0 ? d + (d == 1 ? ' Día, ' : ' Días, ') : '';
-  const hDisplay = h > 0 ? h + (h == 1 ? ' Hora, ' : ' Horas, ') : '';
-  const mDisplay = m > 0 ? m + (m == 1 ? ' Minuto, ' : ' Minutos, ') : '';
-  const sDisplay = s > 0 ? s + (s == 1 ? ' Segundo' : ' Segundos') : '';
+  const dDisplay = d > 0 ? d + (d == 1 ? ' Day, ' : ' Days, ') : '';
+  const hDisplay = h > 0 ? h + (h == 1 ? ' Hour' : ' Hours, ') : '';
+  const mDisplay = m > 0 ? m + (m == 1 ? ' Minute, ' : ' Minutes, ') : '';
+  const sDisplay = s > 0 ? s + (s == 1 ? ' Second' : ' seconds) : '';
   return dDisplay + hDisplay + mDisplay + sDisplay;
 }
 
