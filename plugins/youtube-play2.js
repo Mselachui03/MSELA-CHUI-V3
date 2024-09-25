@@ -29,8 +29,8 @@ let yt = await fg.yta(vid.url, q)
 let { title, dl_url, size } = yt
 let limit = 100
        
-if (size.split('MB')[0] >= limit) return star.reply(m.chat, `El archivo pesa mas de ${limit} MB, se canceló la Descarga.`, m, rcanal).then(_ => m.react('✖️'))
-
+if (size.split('MB')[0] >= limit) return star.reply(m.chat, `The file is larger than ${limit} MB, download was cancelled.`, m, rcanal).then(_ => m.react('✖️'))
+	
 await conn.sendMessage(m.chat, { audio: { url: dl_url }, fileName: title + '.mp3', mimetype: 'audio/mp4' }, { quoted: m })
 await m.react('✅')
 } catch {
@@ -39,7 +39,8 @@ let yt = await fg.ytmp3(vid.url, q)
 let { title, dl_url, size } = yt
 let limit = 100
        
-if (size.split('MB')[0] >= limit) return star.reply(m.chat, `El archivo pesa mas de ${limit} MB, se canceló la Descarga.`, m, rcanal).then(_ => m.react('✖️'))
+if (size.split('MB')[0] >= limit) return star.reply(m.chat, `The file is larger than ${limit} MB, download was cancelled.`, m, rcanal).then(_ => m.react('✖️'))
+	
        
 await conn.sendMessage(m.chat, { audio: { url: dl_url }, fileName: title + '.mp3', mimetype: 'audio/mp4' }, { quoted: m })
 await m.react('✅')
