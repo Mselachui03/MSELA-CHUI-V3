@@ -1,7 +1,7 @@
 let handler = async (m, { conn, text, usedPrefix, command }) => {
   // Sound
   let name = m.pushName || conn.getName(m.sender)
-  var vn = 'https://aimusicfactory.ai/share?id=481439&music_id=2627a466-0929-430b-8286-f9018eb0d30f'
+  var vn = 'https://aimusicfactory.ai/share?id=481439&music_id=2627a466-0929-430b-8286-f9018eb0d30f.mp3'
   let url = 'https://github.com/Mselachui03/MSELA-CHUI-V3'
   let murl = 'https://youtu.be/3j_EIP--2t8?si=4TFWV0On6Bl1wr-e'
   let img = 'https://i.imgur.com/JeVEiQY.jpeg'
