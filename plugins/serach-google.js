@@ -4,7 +4,7 @@ import axios from 'axios';
 let handler = async (m, { conn, command, args, usedPrefix }) => {
   const fetch = (await import('node-fetch')).default;
   const text = args.join` `;
-  if (!text) return conn.reply(m.chat, '🚩 Ingresa lo que deseas buscar junto al comando.', m)
+  if (!text) return conn.reply(m.chat, '🐯 Enter what you want to search for next to the command.', m)
   await m.react('🕓')
   let img = 'https://i.ibb.co/P5kZNFF/file.jpg'
 const url = 'https://google.com/search?q=' + encodeURIComponent(text);
@@ -16,7 +16,7 @@ teks += `*${g.title}*\n${g.link}\n${g.snippet}\n\n`
 conn.sendFile(m.chat, img, 'thumbnail.jpg', teks, m).then(_ => m.react('✅'))
 })
 }
-handler.help = ['google *<texto>*']
+handler.help = ['google *<text>*']
 handler.tags = ['tools', 'search']
 handler.command = /^googlef?$/i
 //handler.limit = 1
