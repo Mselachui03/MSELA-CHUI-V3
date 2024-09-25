@@ -14,11 +14,11 @@ await conn.sendAi(m.chat, botname, textbot, bienvenida, img, img, canal, estilo)
   }
   
   if (chat.welcome && m.messageStubType == 28) {
-    let bye = `┌─★ *${botname}* \n│「 ADIOS 👋 」\n└┬★ 「 @${m.messageStubParameters[0].split`@`[0]} 」\n   │✑  He went away\n   │✑ We never wanted you here\n   └───────────────┈ ⳹`
+    let bye = `┌─★ *${botname}* \n│「 WELCOME 🙂 」\n└┬★ 「 @${m.messageStubParameters[0].split`@`[0]} 」\n   │✑  He went away\n   │✑ We never wanted you here\n   └───────────────┈ ⳹`
 await conn.sendAi(m.chat, botname, textbot, bye, img, img, canal, estilo)
   }
   
   if (chat.welcome && m.messageStubType == 32) {
-    let kick = `┌─★ *${botname}* \n│「 ADIOS 👋 」\n└┬★ 「 @${m.messageStubParameters[0].split`@`[0]} 」\n   │✑  He went away\n   │✑ We never wanted you here\n   └───────────────┈ ⳹`
+    let kick = `┌─★ *${botname}* \n│「 GOOD BYE 👋 」\n└┬★ 「 @${m.messageStubParameters[0].split`@`[0]} 」\n   │✑  He went away\n   │✑ We never wanted you here\n   └───────────────┈ ⳹`
 await conn.sendAi(m.chat, botname, textbot, kick, img, img, canal, estilo)
 }} 
