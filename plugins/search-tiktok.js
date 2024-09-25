@@ -2,7 +2,7 @@ import axios from 'axios'
 import Starlights from '@StarlightsTeam/Scraper'
 
 let handler = async (m, { conn, usedPrefix, command, text, args }) => {
-  if (!text) return conn.reply(m.chat, `🚩 Ingresa el nombre video que deseas buscar en TikTok.\n\nEjemplo:\n> *${usedPrefix + command}* Ai Hoshino Edit`, m, rcanal)
+  if (!text) return conn.reply(m.chat, `🐯 Enter the name of the video you want to search for on TikTok.\n\nExample:\n> *${usedPrefix + command}* MSELA-CHUI-V3 Edit`, m, rcanal)
   
   await m.react('🕓')
   let img = await (await axios.get('https://i.ibb.co/kyTcqt9/file.jpg', { responseType: 'arraybuffer' })).data
@@ -15,9 +15,9 @@ let handler = async (m, { conn, usedPrefix, command, text, args }) => {
       for (let i = 0; i < (50 <= data.length ? 50 : data.length); i++) {
         let video = data[i]
         txt += `\n\n`
-        txt += `  *» Nro* : ${i + 1}\n`
-        txt += `  *» Título* : ${video.title}\n`
-        txt += `  *» Autor* : ${video.author}\n`
+        txt += `  *» Dream* : ${i + 1}\n`
+        txt += `  *» Title* : ${video.title}\n`
+        txt += `  *» Author* : ${video.author}\n`
         txt += `  *» Url* : ${video.url}`
       }
       await conn.sendFile(m.chat, img, 'thumbnail.jpg', txt, m, null, rcanal)
@@ -30,7 +30,7 @@ let handler = async (m, { conn, usedPrefix, command, text, args }) => {
   }
 }
 handler.tags = ['search']
-handler.help = ['tiktoksearch *<búsqueda>*']
+handler.help = ['tiktoksearch *<search>*']
 handler.command = ['tiktoksearch', 'tiktoks']
 handler.register = true
 
