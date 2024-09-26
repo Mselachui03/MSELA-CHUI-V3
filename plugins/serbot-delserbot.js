@@ -9,10 +9,10 @@ let userS = `${conn.getName(who)}`
 
 try {
 await fs.rmdir("./serbot/" + uniqid, { recursive: true, force: true })
-await parentw.sendMessage(m.chat, { text: '🚩 Sub-Bot eliminado.' }, { quoted: m })
+await parentw.sendMessage(m.chat, { text: '🐯 Sub-Bot removed.' }, { quoted: m })
 } catch(err) {
 if (err.code === 'ENOENT' && err.path === `./serbot/${uniqid}`) {
-await parentw.sendMessage(m.chat, { text: "No cuentas con ninguna sesión de Sub-Bot." }, { quoted: m })
+await parentw.sendMessage(m.chat, { text: "You do not have any Sub-Bot sessions." }, { quoted: m })
 } else {
 await m.react('✖️')
 }}}
