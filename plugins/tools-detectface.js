@@ -8,7 +8,7 @@ let q = m.quoted ? m.quoted : m;
 let mime = (q.msg || q).mimetype || '';
 
 if (!mime.startsWith('image/')) { 
-return m.reply('🚩 Responde a una *Imagen.*');
+return m.reply('🐯 Respond to a *Image.*');
 }
   
 await m.react('🕓');
@@ -25,9 +25,9 @@ let api = await fetch(`https://apis-starlights-team.koyeb.app/starlight/detect-f
 let json = await api.json();
 let { results } = json;
 let txt = '`乂  D E T E C T - F A C E`\n\n'
-    txt += `	✩  *Forma* : ${results.form}\n` 
-    txt += `	✩  *Genero* : ${results.gender}\n\n` 
-    txt += `> 🚩 *${textbot}*`
+    txt += `	✩  *Shape* : ${results.form}\n` 
+    txt += `	✩  *Genre* : ${results.gender}\n\n` 
+    txt += `> 🐯 *${textbot}*`
 
 await conn.reply(m.chat, txt, m, null, rcanal)
 await m.react('✅')
