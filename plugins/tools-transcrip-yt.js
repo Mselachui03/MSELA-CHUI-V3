@@ -1,7 +1,7 @@
 import fetch from 'node-fetch'
 
 let handler = async (m, { conn, text }) => {
-if (!text) return conn.reply(m.chat, '🚩 *Ingrese la url de la cancion de YouTube*', m, rcanal)
+if (!text) return conn.reply(m.chat, '🐯 *Enter the url of the YouTube song*', m, rcanal)
 await m.react('🕓')
 try {
 let app = await fetch(`https://apis-starlights-team.koyeb.app/starlight/transcribir-youtube?url=${text}`, { headers: { 'Content-Type': 'application/json' }})
