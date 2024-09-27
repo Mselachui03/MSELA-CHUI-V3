@@ -9,7 +9,7 @@ let handler = async (m, { conn }) => {
   let mime = (q.msg || q).mimetype || ''
   
   if (!mime.startsWith('image/')) {
-    return m.reply('🚩 Responde a una *Imagen.*')
+    return m.reply('🐯 Respond to a *Image.*')
   }
   await m.react('🕓')
 
@@ -25,15 +25,15 @@ let handler = async (m, { conn }) => {
 
   if (api.data.data) {
     let txt = `*乂  I B B  -  U P L O A D E R*\n\n`
-        txt += `  *» Titulo* : ${q.filename || 'x'}\n`
+        txt += `  *» title* : ${q.filename || 'x'}\n`
         txt += `  *» Id* : ${api.data.data.id}\n`
-        txt += `  *» Enlace* : ${api.data.data.url}\n`
-        txt += `  *» Directo* : ${api.data.data.url_viewer}\n`
+        txt += `  *» Link* : ${api.data.data.url}\n`
+        txt += `  *» Straight* : ${api.data.data.url_viewer}\n`
         txt += `  *» Mime* : ${mime}\n`
         txt += `  *» File* : ${q.filename || 'x.jpg'}\n`
         txt += `  *» Extension* : ${api.data.data.image.extension}\n`
         txt += `  *» Delete* : ${api.data.data.delete_url}\n\n`
-        txt += `🚩 *${textbot}*`
+        txt += `🐯 *${textbot}*`
     await conn.sendFile(m.chat, api.data.data.url, 'ibb.jpg', txt, m, null, rcanal)
     await m.react('✅')
   } else {
