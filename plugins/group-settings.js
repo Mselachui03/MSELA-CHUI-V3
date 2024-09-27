@@ -1,7 +1,7 @@
 let handler = async (m, { conn, args, usedPrefix, command }) => {
     let isClose = {
-        'abrir': 'not_announcement',
-        'cerrar': 'announcement',
+        'open': 'not_announcement',
+        'close': 'announcement',
     }[(args[0] || '')]
     if (isClose === undefined)return conn.reply(`🐯 Choose an option.\n\n*${usedPrefix + command}* open\n${usedPrefix + command}* close`, m, rcanal)
     await conn.groupSettingUpdate(m.chat, isClose)
