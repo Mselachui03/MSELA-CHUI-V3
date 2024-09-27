@@ -8,7 +8,7 @@ let q = m.quoted ? m.quoted : m;
 let mime = (q.msg || q).mimetype || '';
 
 if (!mime.startsWith('image/')) {
-return m.reply('🚩 Responde a una *Imagen.*');
+return m.reply('🐯 Responds to a *Image.*');
 }
 
 await m.react('🕓');
@@ -26,8 +26,8 @@ let json = await api.json();
 let { name, image, similar, others } = json;
 let txt = '`乂  S I M I L A R  -  F A C E`\n\n';
     txt += `*${name}*\n`;
-    txt += `	✩  *similitud* : ${similar}\n\n`;
-    txt += `> 🚩 *${textbot}*`;
+    txt += `	✩  *similarity* : ${similar}\n\n`;
+    txt += `> 🐯 *${textbot}*`;
 
 await conn.sendFile(m.chat, image, 'ibb.jpg', txt, m, null, rcanal);
         
@@ -45,7 +45,7 @@ await m.react('✖️');
 
 handler.help = ['similarface'];
 handler.tags = ['tools'];
-handler.command = /^(similitud-face|face-similar|similarface)$/i;
+handler.command = /^(similarity|face-similar|similarface)$/i;
 handler.register = true
 
 export default handler;
