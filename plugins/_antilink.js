@@ -27,4 +27,4 @@ I'm sorry *@${m.sender.split('@')[0]}*  you will be kicked out of the group ${is
     } else if (!chat.antiLink) return //m.reply('')
   }
   return !0
-      }
+}
