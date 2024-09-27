@@ -1,7 +1,7 @@
 import fetch from 'node-fetch'
 
 let handler = async (m, { conn, text, usedPrefix, command }) => {
-    if (!text) return conn.reply(m.chat, `*🚩 Ingrese su petición*\n*🪼 Ejemplo de uso:* ${usedPrefix + command} como hacer estrella de papel`, m, rcanal)
+    if (!text) return conn.reply(m.chat, `*🐯 Enter your request*\n*🪼 Usage example:* ${usedPrefix + command} como hacer estrella de papel`, m, rcanal)
     await m.react('💬')
 
     try {
@@ -17,7 +17,7 @@ let handler = async (m, { conn, text, usedPrefix, command }) => {
         await m.react('✖️')
     }
 }
-handler.help = ['blackbox *<petición>*']
+handler.help = ['blackbox *<petition>*']
 handler.tags = ['tools']
 handler.command = ['blackbox']
 handler.register = true
