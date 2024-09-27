@@ -12,7 +12,7 @@ m.reply(`Sorry, you've just been removed from the group..`, user)
 
 handler.help = ['kick *@user*']
 handler.tags = ['group']
-handler.command = ['kick', 'fukuza'] 
+handler.command = ['kick', 'remove'] 
 handler.admin = true
 handler.group = true
 handler.botAdmin = true
