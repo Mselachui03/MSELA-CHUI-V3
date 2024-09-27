@@ -1,5 +1,5 @@
 let handler = async (m, { conn, text, usedPrefix, command }) => {
-let txt = `🚩 Ejemplos de uso.\n\n${usedPrefix + command} ¿quién soy? *@user* eres mi putita`
+let txt = `🐯 Examples of use.\n\n${usedPrefix + command} ¿Who am I? *@user* you are my bitch`
 if (!text) return m.reply(txt)
 let cm = copy(m)
 let who
@@ -25,3 +25,4 @@ export default handler
 function copy(obj) {
   return JSON.parse(JSON.stringify(obj))
 }
+  
