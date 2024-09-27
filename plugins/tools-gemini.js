@@ -1,8 +1,8 @@
 import fetch from 'node-fetch'
 
 let handler = async (m, { conn, text, usedPrefix, command }) => {
-    if (!text) return conn.reply(m.chat, `*🚩 Ingrese su petición*\n*🪼 Ejemplo de uso:* ${usedPrefix + command} como hacer estrella de papel`, m, rcanal)
-    await m.react('💬')
+    if (!text) return conn.reply(m.chat, `*🐯 Enter your request*\n*🪼 Usage example:* ${usedPrefix + command} how to make a paper star`, m, rcanal)
+await m.react('💬')
 
     try {
         let api = await fetch(`https://apis-starlights-team.koyeb.app/starlight/gemini?text=${text}`)
@@ -17,7 +17,7 @@ let handler = async (m, { conn, text, usedPrefix, command }) => {
         await m.react('✖️')
     }
 }
-handler.help = ['gemini *<petición>*']
+handler.help = ['gemini *<petition>*']
 handler.tags = ['tools']
 handler.command = ['gemini']
 handler.register = true
