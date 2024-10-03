@@ -1,16 +1,16 @@
 import translate from '@vitalets/google-translate-api'
 import fetch from 'node-fetch'
 const handler = async (m, {text, command, args, usedPrefix}) => {
-  if (!text) return m.reply(`*• Ingresa un texto*\n\n*Ejemplo:*\n*${usedPrefix + command}* Hola bot`)
+  if (!text) return m.reply(`*• Enter a text*\n\n*Example:*\n*${usedPrefix + command}* hello bot`)
   try {
     const api = await fetch('https://api.simsimi.net/v2/?text=' + text + '&lc=es');
     const resSimi = await api.json();
     m.reply(resSimi.success);
   } catch {
     try {
-      if (text.includes('Hola')) text = text.replace('Hola', 'Hello');
-      if (text.includes('hola')) text = text.replace('hola', 'Hello');
-      if (text.includes('HOLA')) text = text.replace('HOLA', 'HELLO');
+      if (text.includes('Hello')) text = text.replace('Hello', 'Hello');
+      if (text.includes('Hello')) text = text.replace('Hello', 'Hello');
+      if (text.includes('HELLO')) text = text.replace('HELLO', 'HELLO');
       const reis = await fetch('https://translate.googleapis.com/translate_a/single?client=gtx&sl=auto&tl=en&dt=t&q=' + text);
       const resu = await reis.json();
       const nama = m.pushName || '1';
@@ -20,11 +20,11 @@ const handler = async (m, {text, command, args, usedPrefix}) => {
       const resu2 = await reis2.json();
       m.reply(resu2[0][0][0]);
     } catch {
-      throw `*Miku Bot😺* | 「 *ERROR* 」\n\nOcurrió un *Error*`;
+      throw `*chui Bot🐯* | 「 *ERROR* 」\n\It didn't happen and *Error*`;
     }
   }
 };
 handler.help = ['simi']
 handler.tags = ['fun'];
-handler.command = /^((sim)?simi|alexa|cortana|bot)$/i;
+handler.command = /^((sim)?simi|chui|msela|bot)$/i;
 export default handler;
