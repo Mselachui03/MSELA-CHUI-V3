@@ -24,7 +24,7 @@ _*${text.toUpperCase()}* *IS 😏💦* *${(500).getRandom()}%* *${command.replac
 `.trim(), m, m.mentionedJid ? {
 mentions: m.mentionedJid
 } : {})}     
-if (command == 'I think') {
+if (command == 'think') {
 conn.reply(m.chat, `
 _*${text.toUpperCase()}* *IS* *${(500).getRandom()}%* *${command.replace('how', '').toUpperCase()},* *MORE INFORMATION IN YOUR PRIVATE 🔥🥵 XD*_
 `.trim(), m, m.mentionedJid ? {
@@ -36,7 +36,7 @@ _*${text.toUpperCase()}* *IS* *${(500).getRandom()}%* *${command.replace('how', 
 `.trim(), m, m.mentionedJid ? {
 mentions: m.mentionedJid
 } : {})}   
-if (command == 'I miss') {
+if (command == 'miss') {
 conn.reply(m.chat, `
 _*${text.toUpperCase()}* *IS* *${(500).getRandom()}%* *${command.replace('how', '').toUpperCase()} 💩*_
 `.trim(), m, m.mentionedJid ? {
@@ -67,7 +67,7 @@ _*${text.toUpperCase()}* *ES* *${(500).getRandom()}%* *${command.replace('how', 
 mentions: m.mentionedJid
 } : {})}         
 }
-handler.help = ['gay2', 'lesbiana', 'straw', 'wanker', 'I think', 'out', 'I miss', 'lacks', 'flat', 'prostitute', 'prostitute'].map((v) => v + " *@user*")
+handler.help = ['gay2', 'lesbiana', 'straw', 'wanker', 'think', 'out', 'miss', 'lacks', 'flat', 'prostitute', 'prostitute'].map((v) => v + " *@user*")
 handler.tags = ['fun']
-handler.command = /^gay2|lesbiana|straw|wanker|i think|out|i miss|lacks|flat|prostitute|prostitute/i
+handler.command = /^gay2|lesbiana|straw|wanker|think|out|miss|lacks|flat|prostitute|prostitute/i
 export default handler
