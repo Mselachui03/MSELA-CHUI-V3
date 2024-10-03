@@ -8,15 +8,15 @@ let now = new Date()
 let lastUsage = global.db.data.users[m.sender].lastAcet || 0
 if (now - lastUsage < cooldown) {
 let remainingTime = cooldown - (now - lastUsage)
-return m.reply(`⏱️ ¡Espera ${msToTime(remainingTime)} antes de volver a usar el comando!`)
+return m.reply(`⏱️ ¡Wait ${msToTime(remainingTime)} before using the command again!`)
 }
-conn.tekateki = conn.tekateki ? conn.tekateki : {}
+conn.puzzle = conn.puzzle ? conn.puzzle : {}
 let id = m.chat
-if (id in conn.tekateki) {
-conn.reply(m.chat, 'Todavía hay acertijos sin responder en este chat', conn.tekateki[id][0])
+if (id in conn.puzzle) {
+conn.reply(m.chat, 'There are still unanswered riddles in this chat', conn.puzzle[id][0])
 return null
 }
-let tekateki = JSON.parse(fs.readFileSync(`./plugins/_acertijo.json`))
+let puzzle = JSON.parse(fs.readFileSync(`./plugins/_acertijo.json`))
 let json = tekateki[Math.floor(Math.random() * tekateki.length)]
 let _clue = json.response
 let clue = _clue.replace(/[A-Za-z]/g, '_')
