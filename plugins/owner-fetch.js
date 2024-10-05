@@ -1,7 +1,7 @@
 import fetch from 'node-fetch'
 import { format } from 'util'
 let handler = async (m, { text }) => {
-    if (!/^https?:\/\//.test(text)) throw 'Ejemplo:\nhttps://pornhub.com'
+    if (!/^https?:\/\//.test(text)) throw 'Example:\nhttps://pornhub.com'
     let _url = new URL(text)
     let url = global.API(_url.origin, _url.pathname, Object.fromEntries(_url.searchParams.entries()), 'APIKEY')
     let res = await fetch(url)
