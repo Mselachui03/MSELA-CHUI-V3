@@ -8,8 +8,8 @@ let handler = async (m, { conn, command, args }) => {
     global.db.data.users[m.sender].limit += count
     conn.reply(m.chat, `╭────═[ *R P G  -  S H O P* ]═─────⋆
 │╭───────────────···
-││✯ *Compra* : + ${count} ⭐ Stars 
-││✯ *Costo* : -${xpperlimit * count} 💫 XP
+││✯ *Buy* : + ${count} ⭐ Stars 
+││✯ *Cost* : -${xpperlimit * count} 💫 XP
 │╰────────────────···
 ╰───────────═┅═──────────`, m, rcanal)
   } else conn.reply(m.chat, `🐯 Sorry, you don't have enough *⭐ XP* to purchase *${count} ⭐ Stars.*`, m, rcanal)
