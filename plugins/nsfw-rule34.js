@@ -6,7 +6,7 @@ if (!text) return m.reply('🐯 Enter the name of the image you are looking for.
 await m.react('🕓')
 try {
 let { dl_url } = await Starlights.rule34(text)
-await conn.sendFile(m.chat, dl_url, 'thumbnail.jpg', `*» Resultado* : ${text}`, m, null, rcanal)
+await conn.sendFile(m.chat, dl_url, 'thumbnail.jpg', `*» Result* : ${text}`, m, null, rcanal)
 await m.react('✅')
 } catch {
 await m.react('✖️')
