@@ -12,7 +12,7 @@ await m.react('✖️')
 }}
 handler.help = ['pinterest *<search>*']
 handler.tags = ['img']
-handler.command = ['pinterest']
+handler.command = ['pinterest','img']
 handler.register = true 
 //handler.limit = 1
 export default handler
