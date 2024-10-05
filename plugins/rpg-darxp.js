@@ -6,17 +6,17 @@ let handler = async (m, { conn, text }) => {
   let who
   if (m.isGroup) who = m.mentionedJid[0]
   else who = m.chat
-  if (!who) throw '🚩 Menciona al usuario con *@user.*'
+  if (!who) throw '🐯 Mention the user with *@user.*'
   let txt = text.replace('@' + who.split`@`[0], '').trim()
-  if (!txt) throw '🚩 Ingrese la cantidad de *💫 XP* que quiere transferir.'
-  if (isNaN(txt)) throw 'Sólo números.'
+  if (!txt) throw '🐯 Enter the amount of *💫 XP* you want to transfer.'
+  if (isNaN(txt)) throw 'Only numbers.'
   let xp = parseInt(txt)
   let exp = xp
   let imt = Math.ceil(xp * impuesto)
   exp += imt
-  if (exp < 1) throw '🚩 Mínimo es 1 💫 XP.*'
+  if (exp < 1) throw '🐯 Minimum is 1 💫 XP.*'
   let users = global.db.data.users
-  if (exp > users[m.sender].exp) throw '*💫 XP* insuficiente para transferir.'
+  if (exp > users[m.sender].exp) throw '*💫 XP* insufficient to transfer.'
   users[m.sender].exp -= exp
   users[who].exp += xp
 
