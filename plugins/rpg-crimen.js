@@ -8,7 +8,7 @@ let handler = async (m, { conn, text, command, usedPrefix }) => {
   let tiempoEspera = 5 * 60
   if (cooldowns[m.sender] && Date.now() - cooldowns[m.sender] < tiempoEspera * 1000) {
     let tiempoRestante = segundosAHMS(Math.ceil((cooldowns[m.sender] + tiempoEspera * 1000 - Date.now()) / 1000))
-    m.reply(`🚩 Ya has cometido un Crimen recientemente, espera *⏱ ${tiempoRestante}* para cometer tu próximo Crimen y evitar ser atrapado.`)
+    m.reply(`🐯 You have already committed a Crime recently, please wait *⏱ ${tiempoRestante}* to commit your next crime and avoid getting caught.`)
     return
   }
   
@@ -36,7 +36,7 @@ let handler = async (m, { conn, text, command, usedPrefix }) => {
   users[senderId].limit += amountTaken
   users[randomUserId].limit -= amountTaken
   conn.sendMessage(m.chat, {
-        text: `🚩¡Lograste cometer tu crimen con exito!, acabas de robar *${amountTaken} ⭐ Estrellas* a @${randomUserId.split("@")[0]}\n\nSe suman *+${amountTaken} ⭐ Estrellas* a ${senderName}.`,
+        text: `🐯¡You managed to commit your crime successfully! You just stole. *${amountTaken} ⭐ Stars* a @${randomUserId.split("@")[0]}\n\nThey add up *+${amountTaken} ⭐ Stars* a ${senderName}.`,
   contextInfo: { 
   mentionedJid: [randomUserId],
   }
@@ -46,16 +46,15 @@ let handler = async (m, { conn, text, command, usedPrefix }) => {
   case 1:
   let amountSubtracted = Math.min(Math.floor(Math.random() * (senderLimit - minAmount + 1)) + minAmount, maxAmount)
   users[senderId].limit -= amountSubtracted
-  conn.reply(m.chat, `🚩 No fuiste cuidadoso y te atraparon mientras cometias tu cirme, se restaron *-${amountSubtracted} ⭐ Estrellas* a ${senderName}.`, m)
-  break
+  conn.reply(m.chat, `🐯 You were not careful and got caught while committing your crime, *-${amountSubtracted} ⭐ Stars* were subtracted from ${senderName}.`, m)
+break
 
   case 2:
   let smallAmountTaken = Math.min(Math.floor(Math.random() * (randomUserLimit / 2 - minAmount + 1)) + minAmount, maxAmount)
   users[senderId].limit += smallAmountTaken
   users[randomUserId].limit -= smallAmountTaken
   conn.sendMessage(m.chat, {
-  text: `🚩 Lograste cometer tu crimen con exito, pero te descubrieron y solo lograste tomar *${smallAmountTaken} ⭐ Estrellas* de @${randomUserId.split("@")[0]}\n\nSe suman *+${smallAmountTaken} ⭐ Estrellas* a ${senderName}.`,
-  contextInfo: { 
+  text: `🐯 You managed to commit your crime successfully, but you were discovered and only managed to take *${smallAmountTaken} ⭐ Stars* from @${randomUserId.split("@")[0]}\n\n*+${smallAmountTaken} ⭐ Stars* are added to ${
   mentionedJid: [randomUserId],
   }
   }, { quoted: m })
