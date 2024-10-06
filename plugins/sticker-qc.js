@@ -2,8 +2,8 @@ import { sticker } from '../lib/sticker.js'
 import axios from 'axios'
 
 let handler = async (m, { conn, text }) => {
-   if (!text) return conn.reply(m.chat, '🚩 Ingresa un texto junto al comando.', m, rcanal)
-   if (text.length > 30) return conn.reply(m.chat, 'Solo se permiten 30 caracteres como Máximo.', m, rcanal)
+   if (!text) return conn.reply(m.chat, '🐯 Enter a text next to the command.', m, rcanal)
+   if (text.length > 30) return conn.reply(m.chat, 'Only 30 characters maximum are allowed.', m, rcanal)
    await m.react('🕓')
    try {
    let pp = await conn.profilePictureUrl(m.sender, 'image').catch(_ => global.imgbot.noprofileurl)
@@ -40,7 +40,7 @@ let handler = async (m, { conn, text }) => {
 } catch {
 await m.react('✖️')
 }}
-handler.help = ['quotly *<texto>*']
+handler.help = ['quotly *<text>*']
 handler.tags = ['sticker']
 handler.command = ['quotly', 'qc']
 handler.register = true 
