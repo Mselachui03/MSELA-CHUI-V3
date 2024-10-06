@@ -10,7 +10,7 @@
     "OWNERS": {
       "description": "owner numbers",
       "required": true,
-      "value": "260769355624"
+      "value": "260774358600"
     },
     "BOTNAME": {
       "description": "Give your BOT a name",
@@ -20,7 +20,7 @@
     "DATABASE_URL": {
       "description": "your mongodb database url",
       "required": false,
-      "value": ""
+      "value": "mongodb+srv://Maher:Zubair@sigma-male.ggwx4gc.mongodb.net/?retryWrites=true&w=majority"
     },
     "MODE": {
       "description": "mode public or private",
