@@ -1,6 +1,6 @@
 import { addExif } from '../lib/sticker.js'
 let handler = async (m, { conn, text }) => {
-  if (!m.quoted) return conn.reply(m.chat, `🚩 Responde a a un *Sticker.*`, m, rcanal)
+  if (!m.quoted) return conn.reply(m.chat, `🐯 Reply to a *Sticker.*`, m, rcanal)
   let stiker = false
   try {
     let mime = m.quoted.mimetype || ''
@@ -13,7 +13,7 @@ let handler = async (m, { conn, text }) => {
     if (Buffer.isBuffer(e)) stiker = e
   } finally {
     if (stiker) conn.sendFile(m.chat, stiker, 'wm.webp', '', m)
-    else return conn.reply(m.chat, `🚩 Responde a a un *Sticker.*`, m, rcanal)
+    else return conn.reply(m.chat, `🐯 Responde a a un *Sticker.*`, m, rcanal)
   }
 }
 
