@@ -21,7 +21,7 @@ await m.react('✖️')
 }}
 handler.help = ['play *<search>*']
 handler.tags = ['downloader']
-handler.command = ['play']
+handler.command = ['play','song']
 //handler.register = true 
 export default handler
 
