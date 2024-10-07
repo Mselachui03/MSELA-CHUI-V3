@@ -6,15 +6,15 @@ let handler = async (m, { conn, args, usedPrefix, command }) => {
         lang = args[0] ? args[0] : "id", text = args.slice(1).join(" ")
     } else if (m.quoted && m.quoted.text) {
         lang = args[0] ? args[0] : "id", text = m.quoted.text
-    } else return conn.reply(m.chat, `*🚩 Ejemplo: ${usedPrefix + command} es Hello World*`, m, rcanal)
+    } else return conn.reply(m.chat, `*🐯 Example: ${usedPrefix + command} is Hello World*`, m, rcanal)
     try {
     const prompt = encodeURIComponent(text)
         let reis = await fetch("https://translate.googleapis.com/translate_a/single?client=gtx&sl=auto&tl=" + lang + "&dt=t&q=" + prompt)
         let res = await reis.json()
         let lister = Object.keys(await langList())
-        let supp = `Error: Idioma *${lang}* no admitido`
-        if (!lister.includes(lang)) return m.reply('El idioma que ingresaste no es *válido*, por favor intenta con un idioma *válido*\n\n❄️ Lista de idiomas ❄️\n*https://cloud.google.com/translate/docs/languages*')
-        await m.react('🕓')
+        let supp = `Error: Language *${lang}* no admitted`
+        if (!lister.includes(lang)) return m.reply('The language you entered is not *valid*, please try a *valid* language\n\n❄️ List of languages ❄️\n*https://cloud.google.com/translate/docs/languages*')
+await m.react('🕓')
         let Detect = (res[2].toUpperCase() ? res[2].toUpperCase() : "US")
         let ToLang = (lang.toUpperCase())
         let caption = `*» Resultado* : ${res[0][0][0]}`
@@ -24,9 +24,9 @@ let handler = async (m, { conn, args, usedPrefix, command }) => {
         await m.react('✖️')
     }
 }
-handler.help = ['trad *<leng> <texto>*']
+handler.help = ['trad *<len> <text>>*']
 handler.tags = ['tools']
-handler.command = /^(translate|traducir|trad)$/i
+handler.command = /^(translate|tr|trt)$/i
 handler.star = 1
 handler.register = true 
 export default handler
