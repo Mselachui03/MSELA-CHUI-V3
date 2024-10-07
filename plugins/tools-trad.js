@@ -17,7 +17,7 @@ let handler = async (m, { conn, args, usedPrefix, command }) => {
 await m.react('🕓')
         let Detect = (res[2].toUpperCase() ? res[2].toUpperCase() : "US")
         let ToLang = (lang.toUpperCase())
-        let caption = `*» Resultado* : ${res[0][0][0]}`
+        let caption = `*» Result* : ${res[0][0][0]}`
         await conn.reply(m.chat, caption, m, rcanal)
         await m.react('✅')
     } catch (e) {
