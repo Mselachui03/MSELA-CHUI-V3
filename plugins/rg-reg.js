@@ -20,13 +20,13 @@ let handler = async function (m, { conn, text, usedPrefix, command }) {
   user.regTime = + new Date
   user.registered = true
   let sn = createHash('md5').update(m.sender).digest('hex')
-  let img = await (await fetch(`https://tinyurl.com/ynvdqh3x`)).buffer()
+  let img = await (await fetch(`https://files.catbox.moe/gzln4x.jpg`)).buffer()
   let txt = ` –  *R E G I S T R O  -  U S E R*\n\n`
       txt += `┌  ✩  *Name* : ${name}\n`
       txt += `│  ✩  *Age* : ${age} years\n`
       txt += `│  ✩  *Serial number*\n`
       txt += `└  ✩  ${sn}`
-await conn.sendAi(m.chat, botname, textbot, txt, img, img, canal, m)
+await conn.sendAi(m.chat, botname, textbot, txt, img, img, , m)
 await m.react('✅')
 }
 handler.help = ['reg'].map(v => v + ' *<name.age>*')
