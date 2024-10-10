@@ -26,7 +26,7 @@ let handler = async function (m, { conn, text, usedPrefix, command }) {
       txt += `│  ✩  *Age* : ${age} years\n`
       txt += `│  ✩  *Serial number*\n`
       txt += `└  ✩  ${sn}`
-await conn.sendAi(m.chat, botname, textbot, txt, img, img, , m)
+await conn.sendAi(m.chat, botname, textbot, txt, img, img, canal, m)
 await m.react('✅')
 }
 handler.help = ['reg'].map(v => v + ' *<name.age>*')
