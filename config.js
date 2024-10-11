@@ -29,12 +29,12 @@ global.prems = ['255734980103']
    
 //*─ׄ─ׅ─ׄ─⭒─ׄ─ׅ─ׄ─⭒─ׄ─ׅ─ׄ─⭒─ׄ─ׅ─ׄ─⭒─ׄ─ׅ─ׄ─⭒─ׄ─ׅ─ׄ─*
 
-global.packname = `MSELA-CHUI-V3`
+global.packname = ``MSELA-CHUI-V3``
 global.author = '{\n "bot": {\n   "name": "MSELA-CHUI-V3",\n     "author": "Mselachui",\n   "status_bot": "active"\n }\n}'
-global.wait = '🐯 *Please wait brother... `MSELA-CHUI-V3™`*'
-global.botname = '✯ `MSELA-CHUI-V3` ✰'
-global.textbot = `Powered by `MSELA-CHUI-V3™``
-global.listo = '*`MSELA-CHUI-V3™`*'
+global.wait = '🐯 *Please wait brother... ``MSELA-CHUI-V3``*'
+global.botname = '✯ ``MSELA-CHUI-V3`` ✰'
+global.textbot = `Powered by ``MSELA-CHUI-V3``
+global.listo = '*`MSELA-CHUI-V3`*'
 global.namechannel = '【 ✯MSELA-CHUI-V3 CHANNEL✰ 】'
 
 //*─ׄ─ׅ─ׄ─⭒─ׄ─ׅ─ׄ─⭒─ׄ─ׅ─ׄ─⭒─ׄ─ׅ─ׄ─⭒─ׄ─ׅ─ׄ─⭒─ׄ─ׅ─ׄ─*
