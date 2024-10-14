@@ -52,7 +52,7 @@
 
 1. Now deploy.
     <br>
-    <a href='https://dashboard.heroku.com/new?template=https://github.com/Mselachui03/chui-private' target="_blank"><img alt='DEPLOY' src='https://img.shields.io/badge/-DEPLOY-purple?style=for-the-badge&logo=heroku&logoColor=white'/></a>
+    <a href='https://dashboard.heroku.com/' target="_blank"><img alt='DEPLOY' src='https://img.shields.io/badge/-DEPLOY-purple?style=for-the-badge&logo=heroku&logoColor=white'/></a>
 
     <h2 align="center"> ⚠️ NOTE  </h2>
 ## MSELA-CHUI-V3 SCRIPT IS NOT OPENLY ALLOWED TO USED IN ANY OF YOUR PROJECTS BE WARNED!!! 
