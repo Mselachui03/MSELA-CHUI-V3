@@ -1,8 +1,8 @@
 {
-    "name": "MSELACHUI MD",
+    "name": "LAZACK MD",
     "version": "2.1.0",
-    "description": "Best WhatsApp",
-    "main": "chui.js",
+    "description": "Advanced WhatsApp",
+    "main": "mtaju.js",
     "type": "module",
     "directories": {
         "lib": "lib",
@@ -13,8 +13,8 @@
         "node": ">=20.0.0"
     },
     "scripts": {
-        "start": "node chui.js",
-        "test": "node chuibots.js"
+        "start": "node mtaju.js",
+        "test": "node mtajubots.js"
     },
     "keywords": [
         "termux-whatsapp-bot",
@@ -28,16 +28,16 @@
         "MD",
         "baileys-md"
     ],
-    "homepage": "https://github.com/Mselachui03/MSELA-CHUI-V3",
+    "homepage": "https://github.com/Lazack28/Lazack-Device",
     "author": {
-        "name": "MSELACHUI"
+        "name": "LAZACK"
     },
     "repository": {
         "type": "git",
-        "url": "git+https://github.com/Mselachui03/MSELA-CHUI-V3.git"
+        "url": "git+https://github.com/Lazack28/Lazack-Device.git"
     },
     "bugs": {
-        "url": "https://github.com/Mselachui03/MSELA-CHUI-V3/issues"
+        "url": "https://github.com/Lazack28/Lazack-Device/issues"
     },
     "license": "Apache License 2.0",
     "dependencies": {
@@ -121,4 +121,4 @@
     "devDependencies": {
         "prettier": "^3.2.5"
     }
-}
+    }
