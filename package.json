@@ -1,17 +1,17 @@
 {
-	"name": "Elaina-Ai",
+	"name": "MSELA CHUI",
 	"version": "6.0.0",
 	"description": "Simple WhatsApp Bot Multi Device",
-	"main": "elaina.js",
+	"main": "private.js",
 	"type": "module",
 	"directories": {
 		"lib": "lib",
 		"plugins": "plugins"
 	},
 	"scripts": {
-		"start": "node elaina.js",
+		"start": "node private.js",
 		"test": "node test.js",
-		"test2": "nodemon index.js"
+		"test2": "nodemon private.js"
 	},
 	"keywords": [
 		"termux-whatsapp-bot",
@@ -25,16 +25,16 @@
 		"MD",
 		"baileys-md"
 	],
-	"homepage": "https://github.com/MauroAzcurra/Elaina-Ai",
+	"homepage": "https://github.com/Mrandbad/ANDBAD-MD-V1",
 	"author": {
 		"name": "MauroAzcurra"
 	},
 	"repository": {
 		"type": "git",
-		"url": "git+https://github.com/MauroAzcurra/Elaina-Ai.git"
+		"url": "git+https://github.com/Mrandbad/ANDBAD-MD-V1.git"
 	},
 	"bugs": {
-		"url": "https://github.com/MauroAzcurra/Elaina-Ai/issues"
+		"url": "https://github.com/Mrandbad/ANDBAD-MD-V1/issues"
 	},
 	"license": "GPL-3.0-or-later",
 	"dependencies": {
