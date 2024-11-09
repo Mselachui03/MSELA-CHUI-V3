@@ -9,7 +9,9 @@
 		"plugins": "plugins"
 	},
 	"scripts": {
-		"start": "node system/index.js"
+		"start": "node system/index.js",
+		"test": "node test.js",
+		"test2": "nodemon system/index.js"
 	},
 	"keywords": [
 		"termux-whatsapp-bot",
