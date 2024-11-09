@@ -403,16 +403,16 @@ export async function handler(chatUpdate) {
 
 global.dfail = (type, m, conn, usedPrefix) => {
     let msg = {
-        rowner: "> _*`Perdon, Este comando es solo para mi Owner.`*_",
-        owner: "> _*`Perdon, Solo mi creador puede usar este comando.`*_",
-        mods: "> _*`Perdon, Este comando solo es para mods`*_",
-        premium: "> _*`No eres un usuario Premium, Habla con mi owner`*_",
-        group: "> _*`Perdon, Este comando solo es para grupos`*_",
-        private: "> _*`Ve a mi chat privado y usa este comando`*_",
-        admin: "> _*`Quien eres?, tu no eres admin`*_",
-        botAdmin: "> _*`Es necesario que sea admin primero para usar esta función`*_",
-        unreg: "> _*`‼️USUARIO NO REGISTRADO‼️`*_\n\n`Para registrarse:`\n\n> .reg nombre.edad\n\n`Ejemplo:`\n\n> .reg Kenisawa.19",
-        restrict: "> _*`Comando desactivado por mi Owner`*_" 
+        rowner: "> _*`Sorry, This command is only for my Owner.`*_",
+        owner: "> _*`Sorry, only my creator can use this command.`*_",
+        mods: "> _*`Sorry, this command is only for mods`*_",
+        premium: "> _*`You are not a Premium user, Talk to my owner`*_",
+        group: "> _*`Sorry, this command is only for groups`*_",
+        private: "> _*`Go to my private chat and use this command`*_",
+        admin: "> _*`Who are you? You are not admin`*_",
+        botAdmin: "> _*`You need to be an admin first to use this feature`*_",
+        unreg: "> _*`‼️UNREGISTERED USER‼️`*_\n\n`To register:`\n\n> .reg name.age\n\n`Example:`\n\n> .reg mselachui.03",
+        restrict: "> _*`Command disabled by my Owner`*_" 
     }[type]
     if (msg) return conn.reply(m.chat, msg, m, rcanal).then(_ => m.react('✖️'))
 }
@@ -420,6 +420,6 @@ global.dfail = (type, m, conn, usedPrefix) => {
 let file = global.__filename(import.meta.url, true)
 watchFile(file, async () => {
     unwatchFile(file)
-    console.log(chalk.magenta("Se actualizo 'handler.js'"))
+    console.log(chalk.magenta("It was updated 'handler.js'"))
     if (global.reloadHandler) console.log(await global.reloadHandler())
 })
