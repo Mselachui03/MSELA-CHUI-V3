@@ -75,8 +75,7 @@
 		"syntax-error": "^1.4.0",
         "terminal-image": "^2.0.0",
 		"yargs": "^17.7.2",
-		"yt-search": "^2.10.4",
-		"ytdl-core": "github:HanSamu-27/ytdl-core#main"
+		"yt-search": "^2.10.4"
 	},
 	"optionalDependencies": {
 		"@vitalets/google-translate-api": "^9.2.0",
