@@ -20,12 +20,12 @@ global.prems = []
 //*─ׄ─ׅ─ׄ─⭒─ׄ─ׅ─ׄ─⭒─ׄ─ׅ─ׄ─⭒─ׄ─ׅ─ׄ─⭒─ׄ─ׅ─ׄ─⭒─ׄ─ׅ─ׄ─*
 
 global.packname = `[ Sticker Maker`
-global.author = '✓ chui ]'
-global.wait = '🐢 *Please wait a moment... ฅ^•ﻌ•^ฅ*'
-global.botname = '[ CHUI MSELA V3 ]'
-global.textbot = `Powered By Msela`
-global.listo = '*Aqui tiene ฅ^•ﻌ•^ฅ*'
-global.namechannel = 'Follow me 🌟🌱'
+global.author = '✓ Mselachui ]'
+global.wait = '🐯 *Please wait a moment... ฅ^•ﻌ•^ฅ*'
+global.botname = '[ MSELA-CHUI-V3 ]'
+global.textbot = `Powered By MSELA-CHUI-V3`
+global.listo = '*MSELA-CHUI-V3'
+global.namechannel = 'Follow me 🐯'
 
 //*─ׄ─ׅ─ׄ─⭒─ׄ─ׅ─ׄ─⭒─ׄ─ׅ─ׄ─⭒─ׄ─ׅ─ׄ─⭒─ׄ─ׅ─ׄ─⭒─ׄ─ׅ─ׄ─*
 
