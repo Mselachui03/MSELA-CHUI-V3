@@ -55,7 +55,7 @@ const defaultMenu = {
 \t\t\t*L I S T  -  M E N U*
 `.trimStart(),
   header: '╭───═[ `MENU メ %category` ]═────⋆\n│╭───────────────···',
-  body: '✩│%cmd %islimit %isPremium\n',
+  body: '🐯│%cmd %islimit %isPremium\n',
   footer: '│╰────────────────···\n╰───────────═┅═──────────\n',
   after: `> 🐯 MSELA-CHUI-V3`,
 }
