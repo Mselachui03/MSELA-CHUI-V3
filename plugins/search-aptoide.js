@@ -1,8 +1,8 @@
 import Starlights from '@StarlightsTeam/Scraper'
 
 let handler = async (m, { conn, command, args, text, usedPrefix }) => {
-  if (!text) return conn.reply(m.chat, '[ ✰ ] Ingresa el nombre de la aplicación que deseas buscar en *Aptoide* junto al comando.\n\n`» Ejemplo :`\n' + `> *${usedPrefix + command}* WhatsApp`, m, rcanal)
-  await m.react('🕓')
+  if (!text) return conn.reply(m.chat, '[ 🐯 ] Enter the name of the app you want to search for in *Aptoide* along with the command.\n\n`» Example :`\n' + `> *${usedPrefix + command}* WhatsApp`, m, rcanal)
+await m.react('🕓')
   try {
     let res = await Starlights.aptoideSearch(text)
     let img = `https://telegra.ph/file/e7eae20d14bf755fc4ebb.jpg`
@@ -10,8 +10,8 @@ let handler = async (m, { conn, command, args, text, usedPrefix }) => {
     
     for (let i = 0; i < res.length; i++) {
       txt += `\n\n`
-      txt += `  *» Nro* : ${res[i].nro}\n`
-      txt += `  *» Nombre* : ${res[i].name}\n`
+      txt += `  *» Dream* : ${res[i].nro}\n`
+      txt += `  *» Name* : ${res[i].name}\n`
       txt += `  *» ID* : ${res[i].id}`
     }
     
@@ -22,7 +22,7 @@ let handler = async (m, { conn, command, args, text, usedPrefix }) => {
   }
 }
 
-handler.help = ['aptoidesearch *<búsqueda>*']
+handler.help = ['aptoidesearch *<search>*']
 handler.tags = ['search']
 handler.command = ['aptoidesearch']
 handler.register = true
