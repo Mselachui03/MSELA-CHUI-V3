@@ -1,7 +1,7 @@
 import { googleImage, pinterest } from '@bochilteam/scraper'
 
 let handler = async (m, { conn, text, usedPrefix, command }) => {
-if (!text) return conn.reply(m.chat, `🚩 Ingresa un texto junto al comando.\n\n*Ejemplo:*\n*${usedPrefix + command}* Ai Hoshino`, m, rcanal)
+if (!text) return conn.reply(m.chat, `🐯 Enter some text next to the command.\n\n*Example:*\n*${usedPrefix + command}* MSELA-CHUI-V3`, m, rcanal)
 await m.react('🕓')
 try {
 let res = await (await googleImage('wallpaper' + text)).getRandom()
@@ -10,7 +10,7 @@ await m.react('✅')
 } catch {
 await m.react('✖️')
 }}
-handler.help = ['wallpaper *<búsqueda>*']
+handler.help = ['wallpaper *<search>*']
 handler.tags = ['img']
 handler.command = ['wallpaper', 'wallpapers', 'wp']
 handler.register = true
