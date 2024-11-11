@@ -13,7 +13,6 @@ let tags = {
   'sticker': 'STICKER',
   'img': 'IMAGE',
   'group': 'GROUPS',
-//  'logo': 'MAKER',
   'nable': 'ON / OFF', 
   'premium': 'PREMIUM',
   'downloader': 'DOWNLOAD',
@@ -81,10 +80,10 @@ let handler = async (m, { conn, usedPrefix: _p, __dirname }) => {
       year: 'numeric'
     }).format(d)
     let time = d.toLocaleTimeString(locale, {
-      hour: 'numeric',
-      minute: 'numeric',
-      second: 'numeric'
-    })
+        hour: 'numeric',
+        minute: 'numeric',
+        second: 'numeric'
+      })
     let _uptime = process.uptime() * 1000
     let _muptime
     if (process.send) {
@@ -158,26 +157,21 @@ let handler = async (m, { conn, usedPrefix: _p, __dirname }) => {
     }
     text = text.replace(new RegExp(`%(${Object.keys(replace).sort((a, b) => b.length - a.length).join`|`})`, 'g'), (_, name) => '' + replace[name])
     
-    let pp = 'https://telegra.ph/file/4c3e4b782c82511b3874d.mp4'
-    let pp2 = 'https://telegra.ph/file/d8c5e18ab0cfc10511f63.mp4'
-    let pp3 = 'https://telegra.ph/file/96e471a87971e2fb4955f.mp4'
-    let pp4 = 'https://telegra.ph/file/09b920486c3c291f5a9e6.mp4'
-    let pp5 = 'https://telegra.ph/file/4948429d0ab0212e9000f.mp4'
-    let pp6 = 'https://telegra.ph/file/cab0bf344ba83d79c1a47.mp4'
-    let pp7 = 'https://telegra.ph/file/6d89bd150ad55db50e332.mp4'
-    let pp8 = 'https://telegra.ph/file/e2f791011e8d183bd6b50.mp4'
-    let pp9 = 'https://telegra.ph/file/546a6a2101423efcce4bd.mp4'
-    let pp10 = 'https://telegra.ph/file/930b9fddde1034360fd86.mp4'
-    let pp11 = 'https://telegra.ph/file/81da492e08bfdb4fda695.mp4'
-    let pp12 = 'https://telegra.ph/file/ec8393df422d40f923e00.mp4'
-    let pp13 = 'https://telegra.ph/file/ba7c4a3eb7bf3d892b0c8.mp4'
-    let pp14 = 'https://tinyurl.com/ymlqb6ml'
-    let pp15 = 'https://tinyurl.com/ykv7g4zy'
+    // Define music clips
+    const musicClips = [
+      'https://pomf2.lain.la/f/kaapfv1n.jpg',
+      'https://pomf2.lain.la/f/kaapfv1n.jpg',
+      'https://pomf2.lain.la/f/kaapfv1n.jpg',
+      // Add more music URLs as needed
+    ];
+
+    // Select a random music clip
+    const randomMusicClip = musicClips[Math.floor(Math.random() * musicClips.length)];
+
     let img = await (await fetch(`https://files.catbox.moe/0zt0b2.jpg`)).buffer()
     await m.react('🐯')
-   // await conn.sendMessage(m.chat, { video: { url: [pp, pp2, pp3, pp4, pp5, pp6, pp7, pp8, pp9, pp10, pp11, pp12, pp13, pp14, pp15].getRandom() }, gifPlayback: true, caption: text.trim(), mentions: [m.sender] }, { quoted: estilo })
     await conn.sendFile(m.chat, img, 'thumbnail.jpg', text.trim(), m, null, rcanal)
-   //await conn.sendAi(m.chat, botname, textbot, text.trim(), img, img, canal, estilo)
+    await conn.sendFile(m.chat, randomMusicClip, 'music.mp3', '', m);
 
   } catch (e) {
     conn.reply(m.chat, '❎ Sorry, the menu has an error.', m)
@@ -187,10 +181,9 @@ let handler = async (m, { conn, usedPrefix: _p, __dirname }) => {
 
 handler.help = ['menu']
 handler.tags = ['main']
-handler.command = ['menu', 'help', 'menú'] 
+handler.command = ['menu ', 'help', 'menú'] 
 handler.register = true 
 export default handler
-
 
 const more = String.fromCharCode(8206)
 const readMore = more.repeat(4001)
@@ -202,12 +195,12 @@ function clockString(ms) {
   return [h, m, s].map(v => v.toString().padStart(2, 0)).join(':')
 }
 
-  var ase = new Date();
-  var hour = ase.getHours();
+var ase = new Date();
+var hour = ase.getHours();
 switch(hour){
   case 0: hour = 'Well sleep 🌙'; break;
   case 1: hour = 'A nice midnight 💤'; break;
-  case 2: hour = ' A nice morning 🦉'; break;
+  case 2: hour = 'A nice morning 🦉'; break;
   case 3: hour = 'A nice morning ✨'; break;
   case 4: hour = 'A nice morning 💫'; break;
   case 5: hour = 'A nice morning 🌅'; break;
@@ -218,16 +211,16 @@ switch(hour){
   case 10: hour = 'A nice morning 🌞'; break;
   case 11: hour = 'A nice morning 🌨'; break;
   case 12: hour = 'A nice morning ❄'; break;
-  case 13: hour = 'A nice morning 🌤'; break;
+  case 13: hour = 'A nice afternoon 🌤'; break;
   case 14: hour = 'A nice afternoon 🌇'; break;
   case 15: hour = 'A nice afternoon 🥀'; break;
   case 16: hour = 'A nice afternoon 🌹'; break;
-  case 17: hour = 'A nice afternoon 🌆'; break;
-  case 18: hour = 'A nice night  🌙'; break;
+  case 17: hour = 'A nice evening 🌆'; break;
+  case 18: hour = 'A nice night 🌙'; break;
   case 19: hour = 'A nice night 🌃'; break;
   case 20: hour = 'A nice night 🌌'; break;
   case 21: hour = 'A nice night 🌃'; break;
   case 22: hour = 'A nice night 🌙'; break;
   case 23: hour = 'A nice night 🌃'; break;
 }
-  var greeting = "I hope you have " + hour;
+var greeting = "I hope you have " + hour;
