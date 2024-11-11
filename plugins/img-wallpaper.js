@@ -1,11 +1,11 @@
 import { googleImage, pinterest } from '@bochilteam/scraper'
 
 let handler = async (m, { conn, text, usedPrefix, command }) => {
-if (!text) return conn.reply(m.chat, `🐯 Enter some text next to the command.\n\n*Example:*\n*${usedPrefix + command}* MSELA-CHUI-V3`, m, )
+if (!text) return conn.reply(m.chat, `🐯 Enter some text next to the command.\n\n*Example:*\n*${usedPrefix + command}* MSELA-CHUI-V3`, m, rcanal)
 await m.react('🕓')
 try {
 let res = await (await googleImage('wallpaper' + text)).getRandom()
-await conn.sendFile(m.chat, res, 'thumbnail.jpg', `*» Wallpaper* : ${text ? text.capitalize() : false}`, m, null, r)
+await conn.sendFile(m.chat, res, 'thumbnail.jpg', `*» Wallpaper* : ${text ? text.capitalize() : false}`, m, null, rcanal)
 await m.react('✅')
 } catch {
 await m.react('✖️')
