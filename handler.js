@@ -85,8 +85,8 @@ export async function handler(chatUpdate) {
             if (chat) {
                 if (!('isBanned' in chat))
                     chat.isBanned = false
-                if (!('bienvenida' in chat))
-                    chat.bienvenida = true 
+                if (!('welcome' in chat))
+                    chat.welcome = true 
                 if (!('antiLink' in chat))
                     chat.antiLink = false
                 if (!('onlyLatinos' in chat))
@@ -98,7 +98,7 @@ export async function handler(chatUpdate) {
             } else
                 global.db.data.chats[m.chat] = {
                     isBanned: false,
-                    bienvenida: true,
+                    welcome: true,
                     antiLink: false,
                     onlyLatinos: false,
                     nsfw: false, 
@@ -289,11 +289,11 @@ export async function handler(chatUpdate) {
                 m.isCommand = true
                 let xp = 'exp' in plugin ? parseInt(plugin.exp) : 17 
                 if (xp > 200)
-                    m.reply('chirrido -_-')
+                    m.reply('chirp -_-')
                 else
                     m.exp += xp
                 if (!isPrems && plugin.limit && global.db.data.users[m.sender].limit < plugin.limit * 1) {
-                    conn.reply(m.chat, `lol i dont know *✳️ shit*`, m, rcanal)
+                    conn.reply(m.chat, `Your *⭐ Stars* are sold out`, m, rcanal)
                     continue
                 }
                 let extra = {
@@ -341,7 +341,7 @@ export async function handler(chatUpdate) {
                         }
                     }
                     if (m.limit)
-                        conn.reply(m.chat, `increase *${+m.limit}* ✳️`, m, rcanal)
+                        conn.reply(m.chat, `You used *${+m.limit}* ⭐`, m, rcanal)
                 }
                 break
             }
@@ -403,16 +403,16 @@ export async function handler(chatUpdate) {
 
 global.dfail = (type, m, conn, usedPrefix) => {
     let msg = {
-        rowner: "> _*`Sorry, This command is only for my Owner.`*_",
-        owner: "> _*`Sorry, only my creator can use this command.`*_",
-        mods: "> _*`Sorry, this command is only for mods`*_",
-        premium: "> _*`You are not a Premium user, Talk to my owner`*_",
-        group: "> _*`Sorry, this command is only for groups`*_",
-        private: "> _*`Go to my private chat and use this command`*_",
-        admin: "> _*`Who are you? You are not admin`*_",
-        botAdmin: "> _*`You need to be an admin first to use this feature`*_",
-        unreg: "> _*`UNREGISTERED USER`*_\n\n`To register:`\n\n> .reg name.age\n\n`Example:`\n\n> .reg mselachui.03",
-        restrict: "> _*`Command disabled by my Owner`*_" 
+        rowner: `✯ Hello, this command can only be used by the *Creator* of the Bot.`,
+        owner: `✯ Hello, this command can only be used by the *Creator* of the Bot and *Sub Bots*.`,
+        mods: `✯ Hello, this command can only be used by *Moderators* of the Bot.`,
+        premium: `✯ Hello, this command can only be used by *Premium* Users.`,
+        group: `✯ Hello, this command can only be used in *Groups*.`,
+        private: `✯ Hello, this command can only be used in my *Private* Chat.`,
+        admin: `✯ Hello, this command can only be used by *Administrators* of the Group.`,
+        botAdmin: `✯ Hello, the bot must be *Administrator* to execute this Command.`,
+        unreg: `✯ Hello, to use this command you must be *Registered.*\n\nTo use MSELA-CHUI-V3 you must register first\n\nUse: *.reg name.age*\n\n_Example: *.reg Mselachui.md.18* _\n\nDo not put the * *`,
+        restrict: `✯ Hello, this feature is *disabled.*`  
     }[type]
     if (msg) return conn.reply(m.chat, msg, m, rcanal).then(_ => m.react('✖️'))
 }
