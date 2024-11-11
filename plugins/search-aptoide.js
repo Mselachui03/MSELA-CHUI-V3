@@ -1,7 +1,7 @@
 import Starlights from '@StarlightsTeam/Scraper'
 
 let handler = async (m, { conn, command, args, text, usedPrefix }) => {
-  if (!text) return conn.reply(m.chat, '[ 🐯 ] Enter the name of the app you want to search for in *Aptoide* along with the command.\n\n`» Example :`\n' + `> *${usedPrefix + command}* WhatsApp`, m, rcanal)
+  if (!text) return conn.reply(m.chat, '[ ✰ ] Enter the name of the app you want to search for in *Aptoide* along with the command.\n\n`» Example :`\n' + `> *${usedPrefix + command}* WhatsApp`, m, rcanal)
 await m.react('🕓')
   try {
     let res = await Starlights.aptoideSearch(text)
