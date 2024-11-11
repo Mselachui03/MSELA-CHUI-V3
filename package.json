@@ -57,6 +57,7 @@
 		"formdata-node": "*",
 		"google-it": "*",
 		"node-webpmux": "*",
+		"node-fetch": "^3.3.1",
 		"human-readable": "*",
 		"jsdom": "*",
 		"lodash": "*",
