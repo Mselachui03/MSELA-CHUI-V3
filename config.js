@@ -21,11 +21,11 @@ global.prems = []
 
 global.packname = `[ Sticker Maker`
 global.author = '✓ Mselachui ]'
-global.wait = '🐯 *Please wait a moment... ฅ^•ﻌ•^ฅ*'
+global.wait = '🐯 *Please wait a moment... MSELA-CHUI-V3'
 global.botname = '[ MSELA-CHUI-V3 ]'
 global.textbot = `Powered By MSELA-CHUI-V3`
 global.listo = '*MSELA-CHUI-V3'
-global.namechannel = 'Follow me 🐯'
+global.namechannel = 'MSELA-CHUI-V3 CHANNEL 🐯'
 
 //*─ׄ─ׅ─ׄ─⭒─ׄ─ׅ─ׄ─⭒─ׄ─ׅ─ׄ─⭒─ׄ─ׅ─ׄ─⭒─ׄ─ׅ─ׄ─⭒─ׄ─ׅ─ׄ─*
 
@@ -34,8 +34,8 @@ global.miniurl = fs.readFileSync('./storage/img/miniurl.jpg')
 
 //*─ׄ─ׅ─ׄ─⭒─ׄ─ׅ─ׄ─⭒─ׄ─ׅ─ׄ─⭒─ׄ─ׅ─ׄ─⭒─ׄ─ׅ─ׄ─⭒─ׄ─ׅ─ׄ─*
 
-global.group = 'https://chat.whatsapp.com/'
-global.canal = 'https://whatsapp.com/channel/'
+global.group = 'https://chat.whatsapp.com/Bqb6oEUxAneAqxBUBfNdLr'
+global.canal = 'https://whatsapp.com/channel/0029VakhqAaLtOjBJOL9Wn1q'
 
 //*─ׄ─ׅ─ׄ─⭒─ׄ─ׅ─ׄ─⭒─ׄ─ׅ─ׄ─⭒─ׄ─ׅ─ׄ─⭒─ׄ─ׅ─ׄ─⭒─ׄ─ׅ─ׄ─*
 
