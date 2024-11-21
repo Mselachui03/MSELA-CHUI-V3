@@ -1,5 +1,5 @@
 process.env['NODE_TLS_REJECT_UNAUTHORIZED'] = '1'
-import '../system/settings.js'
+import './settings.js'
 import {createRequire} from 'module'
 import path, {join, dirname} from 'path'
 import { setupMaster, fork } from 'cluster'
