@@ -6,7 +6,7 @@ import fs from 'fs'
 import dotenv from 'dotenv'
 dotenv.config()
 
-const ownervb = process.env.OWNERS || "255734980103"
+const ownervb = process.env.OWNERS || "260774358600"
 
 
 const ownerlist = ownervb.split(';');
@@ -23,9 +23,9 @@ for (let i = 0; i < ownerlist.length; i += 2) {
 
 //global.pairingNumber = "" //put your bot number here
 
-global.mods = ['255734980103', '255758868502']
-global.prems = ['255734980103', '255758868502', '255734980103']
-global.allowed = ['255734980103', '255734980103']
+global.mods = ['260774358600']
+global.prems = ['260774358600']
+global.allowed = ['260774358600']
 global.keysZens = ['c2459db922', '37CC845916', '6fb0eff124']
 global.keysxxx = keysZens[Math.floor(keysZens.length * Math.random())]
 global.keysxteammm = [
@@ -42,7 +42,7 @@ global.keysneoxrrr = ['5VC9rvNx', 'cfALv5']
 global.keysneoxr = keysneoxrrr[Math.floor(keysneoxrrr.length * Math.random())]
 global.lolkeysapi = ['GataDios']
 
-global.canal = 'https://whatsapp.com/channel/0029VaFytPbAojYm7RIs6l1x'
+global.canal = 'https://whatsapp.com/channel/0029VakhqAaLtOjBJOL9Wn1q'
 
 
 global.APIs = {
@@ -74,16 +74,16 @@ global.APIKeys = {
 // Sticker WM
 global.botname = process.env.BOTNAME
 global.premium = 'true'
-global.packname = '𝙇𝙖𝙯𝙖𝙘𝙠'
-global.author = '𝙡𝙖𝙯𝙖𝙘𝙠'
+global.packname = 'MSELA-CHUI-V3'
+global.author = 'MSELACHUI TEACH'
 global.menuvid = ''
 global.igfg = ''
 global.dygp = ''
-global.fgsc = 'https://github.com/Lazack28/Lazack-Device'
-global.fgyt = 'https://youtube.com/@lazaromtaju'
-global.fgpyp = 'https://youtube.com/@lazaromtaju'
+global.fgsc = 'https://github.com/Mselachui03/MSELA-CHUI-V3'
+global.fgyt = 'https://https://youtube.com/@officialchui5653'
+global.fgpyp = 'https://youtube.com/@officialchui5653'
 global.fglog = ''
-global.thumb = fs.readFileSync('./jusorts/lazack.jpg')
+global.thumb = fs.readFileSync('./jusorts/mselachui.jpg')
 
 global.wait = '*⌛ _Charging..._*\n*▰▰▰▱▱▱▱▱*'
 global.rwait = '⌛'
