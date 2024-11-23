@@ -46,7 +46,7 @@ const __dirname = path.dirname(__filename);
 app.use(express.static(path.join(__dirname, 'jusorts')));
 
 app.get('/', (req, res) => {
-  res.redirect('/lazack.html');
+  res.redirect('/chui.html');
 });
 
 app.listen(port, () => {
@@ -87,7 +87,7 @@ async function start(file) {
 
     fs.watchFile(args[0], () => {
       fs.unwatchFile(args[0])
-      start('lazack.js')
+      start('chui.js')
     })
   })
 
@@ -95,7 +95,7 @@ async function start(file) {
     console.error(chalk.red(`Error: ${err}`))
     p.kill()
     isRunning = false
-    start('lazack.js')
+    start('chui.js')
   })
 
   const pluginsFolder = path.join(path.dirname(currentFilePath), 'mselachui')
@@ -117,15 +117,15 @@ async function start(file) {
   })
 }
 
-start('lazack.js')
+start('chui.js')
 
 process.on('unhandledRejection', () => {
   console.error(chalk.red(`Unhandled promise rejection. Bot will restart...`))
-  start('lazack.js')
+  start('chui.js')
 })
 
 process.on('exit', code => {
   console.error(chalk.red(`Exited with code: ${code}`))
   console.error(chalk.red(`Bot will restart...`))
-  start('lazack.js')
+  start('chui.js')
 })
