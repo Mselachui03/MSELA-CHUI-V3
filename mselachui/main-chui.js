@@ -2,32 +2,32 @@ let handler = async m =>
   m.reply(
     `
 
-≡ 𝐋𝐀𝐙𝐀𝐂𝐊-𝐌𝐃 GROUPS
+≡ 𝙈𝙎𝙀𝙇𝘼𝘾𝙃𝙐𝙄 GROUPS
 
 ─────────────
 ▢ Join public bot group and support
-https://chat.whatsapp.com/IIpL6gf6dcq4ial8gaJLE9
+https://mselachui-bot.vercel.app
 
-▢ Group 2
-https://whatsapp.com/channel/0029VaFytPbAojYm7RIs6l1x
+▢ Group 1
+https://chat.whatsapp.com/Bqb6oEUxAneAqxBUBfNdLr
 
 ─────────────
 ≡ Disabled links? enter here! 
 
 ▢ Group WhatsApp 
- https://whatsapp.com/channel/0029VaFytPbAojYm7RIs6l1x
+ https://chat.whatsapp.com/Bqb6oEUxAneAqxBUBfNdLr
 ─────────────
 ▢ *Owner instagram*
- https://instagram.com/Lazack_28
+ https://instagram.com/mselachui
 
 ▢ *YouTube*
-• https://www.youtube.com/@lazack_28
+• https://youtube.com/@officialchui5653
 
 
 `.trim()
   )
 handler.help = ['ruth']
 handler.tags = ['main']
-handler.command = ['groups', 'grouplazack', 'lazackgp', 'sgp', 'grp']
+handler.command = ['groups', 'groupchui', 'chuigrp', 'chui', 'grp']
 
 export default handler
