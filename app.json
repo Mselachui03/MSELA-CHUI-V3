@@ -1,21 +1,21 @@
 {
-  "name": "Lazack Device",
-  "description": " Whatsapp botz made by team lazack.",
+  "name": "MSELA-CHUI-V3",
+  "description": " Whatsapp botz made by MSELACHUI TEACH.",
   "keywords": [
     "whatsapp bot"
   ],
-  "repository": "https://github.com/Lazack28/Lazack-Device",
+  "repository": "https://github.com/Mselachui03/MSELA-CHUI-V3",
   "stack": "container",
   "env": {
     "OWNERS": {
       "description": "owner numbers",
       "required": true,
-      "value": "255734980103"
+      "value": "260774358600"
     },
     "BOTNAME": {
       "description": "Give your BOT a name",
       "required": true,
-      "value": "𝐋𝐀𝐙𝐀𝐂𝐊-𝐃𝐄𝐕𝐈𝐂𝐄"
+      "value": "MSELA-CHUI-V3"
     },
     "DATABASE_URL": {
       "description": "your mongodb database url",
