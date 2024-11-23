@@ -574,10 +574,10 @@ export async function participantsUpdate({ id, participants, action }) {
                 contextInfo: {
                   mentionedJid: [user],
                   externalAdReply: {
-                    title: '𝙻𝙰𝚉𝙰𝙲𝙺 𝙳𝙴𝚅𝙸𝙲𝙴',
+                    title: 'MSELA-CHUI-V3',
                     body: 'welcome to Group',
                     thumbnailUrl: welcomeApiUrl,
-                    sourceUrl: 'https://whatsapp.com/channel/0029VaFytPbAojYm7RIs6l1x',
+                    sourceUrl: 'https://whatsapp.com/channel/0029VakhqAaLtOjBJOL9Wn1q',
                     mediaType: 1,
                     renderLargerThumbnail: true,
                   },
@@ -631,10 +631,10 @@ export async function participantsUpdate({ id, participants, action }) {
                 contextInfo: {
                   mentionedJid: [user],
                   externalAdReply: {
-                    title: '𝙻𝙰𝚉𝙰𝙲𝙺 𝙳𝙴𝚅𝙸𝙲𝙴',
+                    title: 'MSELA-CHUI-V3',
                     body: 'Goodbye from  Group... we really dont wanted you here, fack you boy',
                     thumbnailUrl: leaveApiUrl,
-                    sourceUrl: 'https://whatsapp.com/channel/0029VaFytPbAojYm7RIs6l1x',
+                    sourceUrl: 'https://whatsapp.com/channel/0029VakhqAaLtOjBJOL9Wn1q',
                     mediaType: 1,
                     renderLargerThumbnail: true,
                   },
