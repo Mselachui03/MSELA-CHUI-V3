@@ -1,9 +1,9 @@
 
 {
-    "name": "LAZACK MD",
+    "name": "MSELACHUI MD",
     "version": "2.1.0",
     "description": "Advanced WhatsApp",
-    "main": "mtaju.js",
+    "main": "msela.js",
     "type": "module",
     "directories": {
         "lib": "lib",
@@ -14,7 +14,7 @@
         "node": ">=20.0.0"
     },
     "scripts": {
-        "start": "node mtaju.js",
+        "start": "node msela.js",
         "test": "node mtajubots.js"
     },
     "keywords": [
@@ -29,16 +29,16 @@
         "MD",
         "baileys-md"
     ],
-    "homepage": "https://github.com/Lazack28/Lazack-Device",
+    "homepage": "https://github.com/Mselachui03/MSELA-CHUI-V3",
     "author": {
-        "name": "LAZACK"
+        "name": "MSELACHUI"
     },
     "repository": {
         "type": "git",
-        "url": "git+https://github.com/Lazack28/Lazack-Device.git"
+        "url": "git+https://github.com/Mselachui03/MSELA-CHUI-V3.git"
     },
     "bugs": {
-        "url": "https://github.com/Lazack28/Lazack-Device/issues"
+        "url": "https://github.com/Mselachui03/MSELA-CHUI-V3/issues"
     },
     "license": "Apache License 2.0",
     "dependencies": {
