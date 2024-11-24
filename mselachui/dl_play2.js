@@ -4,12 +4,12 @@ import { youtube } from "btch-downloader";
 let handler = async (m, { conn, text, usedPrefix, command }) => {
   if (!text) return m.reply(`Enter the title or YouTube link!\nExample: *${usedPrefix + command} Faded Alan Walker*`);
 
-  await m.reply("🔄 Please wait while lazack is searching the audio...");
+  await m.reply("🐯 MSELA-CHUI-V3 is searching the audio...");
   try {
     const search = await ytSearch(text); // Search for the video
     const video = search.videos[0];
 
-    if (!video) return m.reply("❌ No results found! Please try again with a different query.");
+    if (!video) return m.reply("😂 No results found! Please try again with a different query.");
     if (video.seconds >= 3600) return m.reply("❌ Video duration exceeds 1 hour. Please choose a shorter video!");
 
     // Attempt to get the audio URL
@@ -17,7 +17,7 @@ let handler = async (m, { conn, text, usedPrefix, command }) => {
     try {
       audioUrl = await youtube(video.url);
     } catch (error) {
-      return m.reply("⚠️ Failed to fetch audio. Please try again later.");
+      return m.reply("🐯 Failed to fetch audio. Please try again later.");
     }
 
     // Send audio file
