@@ -22,7 +22,7 @@ export async function all(m) {
     'Hie',
     'hi',
     'Heey',
-    'lazack'
+    'chui'
   ];
 
   if (
@@ -32,8 +32,8 @@ export async function all(m) {
   ) {
     this.sendButton(
       m.chat,
-      `*WELCOME LAZACK ORGANISATION*      
-    Hello 💕🥰 @${m.sender.split('@')[0]} 
+      `*WELCOME MSELACHUI ORGANISATION*      
+    Hello 🫵👊 @${m.sender.split('@')[0]} 
     I may be offline or I may be slow to respond, but wait I will be back soon 😇\n\n\n *what we offer*\n\n1. Heroku credit cards\n2. Bot deployment works 24/7\n3. social media followers\n4. Web coding and bug fixing\n\n\n\n> use the buttons bellow to see me`.trim(),
       igfg,
       null,
@@ -41,7 +41,7 @@ export async function all(m) {
       m,
       { mentions: [m.sender] }
     );
-    m.react('💕');
+    m.react('🐯');
 
     userLastMessageMap.set(userId, currentTime);
   }
