@@ -5,7 +5,7 @@ let handler = async (m, { conn }) => {
   let av = `./jusorts/${pickRandom(['lazack', 'mtaju'])}.mp3`
 
 
-conn.sendButton(m.chat, `*HOLA FROM BOT LAZACK*      
+conn.sendButton(m.chat, `*HELLO FROM BOT MSELA-CHUI-V3*      
     morning or evening @${m.sender.split('@')[0]} 
     You called me what is youre problem bro? 😇
   `.trim(), igfg, null, [['OWNER HELP', '.grp'],['GET SC', '.repo']] , m, { mentions: [m.sender] })
@@ -13,7 +13,7 @@ conn.sendButton(m.chat, `*HOLA FROM BOT LAZACK*
 conn.sendFile(m.chat, av, 'audio.mp3', null, m, true, { type: 'audioMessage', ptt: true })
 } 
 
-handler.customPrefix = /^(bot|lazack)$/i
+handler.customPrefix = /^(bot|chui)$/i
 handler.command = new RegExp()
 
 export default handler
