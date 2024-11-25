@@ -1,8 +1,8 @@
 FROM quay.io/gurusensei/gurubhay:latest
 
-RUN git clone https://github.com/Mselachui03/MSELA-CHUI-V3/root/chui
+RUN git clone https://github.com/Mselachui03/MSELA-CHUI-V3/root/msela
 
-WORKDIR /root/chui/
+WORKDIR /root/msela/
 
 RUN npm install --platform=linuxmusl
 
