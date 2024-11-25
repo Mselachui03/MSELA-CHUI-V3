@@ -8,7 +8,7 @@ const handler = async (m, { conn, args, usedPrefix, command }) => {
   const urlRegex =
     /^(?:https?:\/\/)?(?:www\.)?(?:facebook\.com|fb\.watch)\b([-a-zA-Z0-9@:%_\+.~#?&//=]*)/i
   if (!urlRegex.test(args[0])) {
-    throw '🐯 PLEASE GIVE A VALID URL.'
+    throw '⚠️ PLEASE GIVE A VALID URL.'
   }
 
   m.react(rwait)
@@ -16,8 +16,9 @@ const handler = async (m, { conn, args, usedPrefix, command }) => {
   try {
     const result = await fg.fbdl(args[0])
     const tex = `
-*𝙈𝙎𝙀𝙇𝘼-𝘾𝙃𝙐𝙄-𝙑3*\n\n
+⊱ *LAZACK MD FACEBOOK DOWNLOADER*⊰\n\n
 ↳ *VIDEO TITLE:* ${result.title}
+⊱ *_THANKS FOR CHOOSING LAZACK MD_*`
 
     const response = await fetch(result.videoUrl)
     const arrayBuffer = await response.arrayBuffer()
@@ -27,7 +28,7 @@ const handler = async (m, { conn, args, usedPrefix, command }) => {
     m.react(done)
   } catch (error) {
     console.log(error)
-    m.reply('🐯 An error occurred while processing the request. Please try again later.')
+    m.reply('⚠️ An error occurred while processing the request. Please try again later.')
   }
 }
 
