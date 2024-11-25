@@ -3,7 +3,7 @@ import fetch from 'node-fetch';
 let handler = async (m, { conn, text, args, usedPrefix, command }) => {
   try {
     if (!text) throw 'uhm.. what do you want to say?';
-    await m.react('🤖');
+    await m.react('🐯');
 
     const prompt = encodeURIComponent(text);
     let apiurl = `https://dark.guruapi.tech/egpt?prompt=${prompt}`;
