@@ -16,7 +16,7 @@ const handler = async (m, { conn, args, usedPrefix, command }) => {
   try {
     const result = await fg.fbdl(args[0])
     const tex = `
-𝙈𝙎𝙀𝙇𝘼-𝘾𝙃𝙐𝙄-𝙑3\n\n
+*𝙈𝙎𝙀𝙇𝘼-𝘾𝙃𝙐𝙄-𝙑3*\n\n
 ↳ *VIDEO TITLE:* ${result.title}
 
     const response = await fetch(result.videoUrl)
